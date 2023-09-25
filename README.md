@@ -1,0 +1,1 @@
+This is my first fully independent project. This web app allows users to review all sorts of products and find information that others have shares about the ones they are after.
