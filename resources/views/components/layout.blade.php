@@ -6,7 +6,7 @@
     
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
     
     <title>Homepage</title>
 
@@ -15,7 +15,7 @@
 </head>
 <body class="bg-white">
 
-    <nav class="justify-between bg-slate-600 border-b border-gray-300">
+    <nav class="justify-between bg-slate-500 border-b border-gray-300">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
