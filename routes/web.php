@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::post('/airports', function () {
+    dd('/airports');
+    return view('index');
+});
