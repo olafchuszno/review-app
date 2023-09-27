@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     @vite('resources/css/app.css')
     
     <title>Homepage</title>
 
-    <script src="//unpkg.com/alpinejs" defer></script>
-
 </head>
-<body class="bg-white">
+<body class="bg-slate-100">
 
     <nav class="justify-between bg-slate-500 border-b border-gray-300">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
@@ -48,8 +46,8 @@
                 <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="bg-slate-500 text-white rounded-lg px-3 py-2 text-sm font-medium" aria-current="page">Search</a>
-                    <a href="#" class="text-white hover:bg-slate-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#" class="bg-slate-600 text-white rounded-lg px-3 py-2 text-sm font-medium" aria-current="page">Search</a>
+                    <a href="#" class="text-white hover:bg-slate-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
                     
                 </div>
                 </div>
