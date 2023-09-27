@@ -18,6 +18,5 @@ Route::get('/', function () {
 });
 
 Route::post('/airports', function () {
-    dd('/airports');
-    return view('index');
+    return view('airports');
 });
