@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
     <title>Homepage</title>
 
     <script src="//unpkg.com/alpinejs" defer></script>
 
 </head>
-<body>
+<body class="bg-white">
 
-    <nav class="bg-gray-800">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <nav class="justify-between bg-slate-600 border-b border-gray-300">
+        <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <!-- Mobile menu button-->
@@ -40,13 +43,13 @@
             </div>
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex flex-shrink-0 items-center">
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=slate&shade=500" alt="Your Company">
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Search</a>
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#" class="bg-slate-500 text-white rounded-lg px-3 py-2 text-sm font-medium" aria-current="page">Search</a>
+                    <a href="#" class="text-white hover:bg-slate-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
                     
                 </div>
                 </div>
@@ -103,7 +106,9 @@
         </div>
     </nav>
 
+    <div class="mt-20">
+        {{ $slot }}
+    </div>
 
-    {{ $slot }}
 </body>
 </html>
