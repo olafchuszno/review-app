@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AirportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::post('/airports', function () {
-    return view('airports');
+Route::get('/airports', [AirportController::class, 'index']);
+
+Route::post('/search', function () {
+    dd('/search');
 });
