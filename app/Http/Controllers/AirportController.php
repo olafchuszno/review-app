@@ -32,7 +32,8 @@ class AirportController extends Controller
 
     public function show(Airport $airport)
     {
-        dd('airport.show');
-        // return view('')
+        return view('airport.show', [
+            'airport' => $airport
+        ]);
     }
 }
