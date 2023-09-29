@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/airports', [AirportController::class, 'index']);
+Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
 
 Route::get('/search', function () {
     $input = request('airport');
