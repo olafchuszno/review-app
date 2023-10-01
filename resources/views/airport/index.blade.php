@@ -4,7 +4,7 @@
         <div class="flex justify-center">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
                 <div class="py-2 align-middle min-w-full sm:px-6 lg:px-8">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" style="width: 600px">
+                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" style="width: 800px">
                         <table class="min-w-full divide-y divide-gray-200 mx-50">
                             <thead>
                                 <tr class="border-slate-300 border-2 py-3">
