@@ -41,3 +41,7 @@ Route::get('/search', function () {
             'airports' => $airports
         ]);
 });
+
+Route::get('/about', function() {
+    return view('about');
+});
