@@ -45,10 +45,10 @@
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="bg-slate-600 text-white rounded-lg px-3 py-2 text-sm font-medium" aria-current="page">Airport Search</a>
+                    
+                    <a href="/" class="{{ request()->is('/') ? 'bg-slate-600' : 'hover:bg-slate-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">Airport Search</a>
                     <a href="#" class="text-white hover:bg-slate-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Journey Search</a>
-                    <a href="#" class="text-white hover:bg-slate-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                    <a href="/about" class="{{ request()->is('about') ? 'bg-slate-600' : 'hover:bg-slate-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">About</a>
                     
                 </div>
                 </div>
