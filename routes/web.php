@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,29 +19,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
-
-Route::get('/search', function () {
-    $input = request('airport');
-
-        $airports = [];
-
-        $query = DB::table('airports')
-        ->where('code', 'like', '%'.$input.'%')
-        ->orWhere('cityCode', 'like', '%'.$input.'%')
-        ->orWhere('cityName', 'like', '%'.$input.'%')
-        ->orWhere('countryName', 'like', '%'.$input.'%')
-        ->get();
-
-        foreach ($query as $item) {
-            $airports[] = $item;
-        }
-
-        return view('airport.index', [
-            'airports' => $airports
-        ]);
-});
-
 Route::get('/about', function() {
     return view('about');
 });
+
+Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
+
+Route::get('/search', [SearchController::class, 'show']);
