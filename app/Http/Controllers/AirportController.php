@@ -14,15 +14,15 @@ class AirportController extends Controller
 
         $airports = [];
 
-        $query = DB::table('airports')
+        $airports = DB::table('airports')
         ->where('code', 'like', '%'.$input.'%')
         ->orWhere('cityCode', 'like', '%'.$input.'%')
         ->orWhere('cityName', 'like', '%'.$input.'%')
         ->orWhere('countryName', 'like', '%'.$input.'%')
         ->get();
 
-        foreach ($query as $item) {
-            $airports[] = $item;
+        foreach ($airports as $airport) {
+            $airports[] = $airport;
         }
 
         return view('airport.index', [
@@ -32,8 +32,18 @@ class AirportController extends Controller
 
     public function show(Airport $airport)
     {
+        $other_airports = null;
+
+        // Check for other airports in the area
+        if ($airport->numAirports > 1) {
+            $other_airports = DB::table('airports')->
+            where(['cityCode' => $airport->cityCode])->
+            get();
+        }
+
         return view('airport.show', [
-            'airport' => $airport
+            'airport' => $airport,
+            'other_airports' => $other_airports
         ]);
     }
 }
