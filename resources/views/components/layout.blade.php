@@ -13,7 +13,7 @@
 </head>
 <body class="bg-slate-100">
 
-    <nav class="justify-between bg-slate-500 border-b border-gray-300 mb-20">
+    <nav class="justify-between bg-indigo-800 border-b border-indigo-700 mb-20">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -41,15 +41,15 @@
             </div>
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex flex-shrink-0 items-center">
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=slate&shade=500" alt="Your Company">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
                     
                     <!-- Navbar Left links -->
-                    <a href="/" class="{{ request()->is('/') ? 'bg-slate-600' : 'hover:bg-slate-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">Airport Search</a>
-                    <a href="#" class="text-white hover:bg-slate-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Journey Search</a>
-                    <a href="/about" class="{{ request()->is('about') ? 'bg-slate-600' : 'hover:bg-slate-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">About</a>
+                    <a href="/" class="{{ request()->is('/') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">Airport Search</a>
+                    <a href="#" class="text-white hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Journey Search</a>
+                    <a href="/about" class="{{ request()->is('about') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">About</a>
                     
                 </div>
                 </div>
