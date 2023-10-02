@@ -10,7 +10,6 @@
             <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Basic information.</p> 
         </div>
         <div class="mt-6 border-t border-gray-100">
-
             <table class="divide-y divide-gray-100">
 
                 @if ($airport->numAirports > 1)
