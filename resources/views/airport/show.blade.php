@@ -12,6 +12,12 @@
 
         <table class="divide-y divide-gray-100">
 
+            @if($airport->numAirports > 1)
+                <x-basic_info class="border-2 border-red-400 px-2">
+                    <td class="text-sm py-2 px-2 font-medium leading-6 text-gray-900">Warning</td>
+                    <td class="mt-1 text-sm py-2 leading-6 text-gray-700 sm:col-span-2 sm:mt-0">There is more than 1 airport in {{ $airport->cityName }}. <br>Please make sure it's the one you're after (check the unique airport code below).</td>
+                </x-basic_info>
+            @endif
             <x-basic_info>
                 <td class="text-sm py-2 font-medium leading-6 text-gray-900">Country name</td>
                 <td class="mt-1 text-sm py-2 leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $airport->countryName }}</td>
