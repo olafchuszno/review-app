@@ -12,33 +12,33 @@
 
         <table class="divide-y divide-gray-100">
 
-            @if($airport->numAirports > 1)
-                <x-basic_info class="border-2 border-red-400 px-2">
-                    <td class="text-sm py-2 px-2 font-medium leading-6 text-gray-900">Warning</td>
-                    <td class="mt-1 text-sm py-2 leading-6 text-gray-700 sm:col-span-2 sm:mt-0">There is more than 1 airport in {{ $airport->cityName }}. <br>Please make sure it's the one you're after (check the unique airport code below).</td>
-                </x-basic_info>
-            @endif
-            <x-basic_info>
-                <td class="text-sm py-2 font-medium leading-6 text-gray-900">Country name</td>
-                <td class="mt-1 text-sm py-2 leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $airport->countryName }}</td>
-            </x-basic_info>
-            <x-basic_info>
-                <td class="text-sm font-medium leading-6 text-gray-900">City name</td>
-                <td class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $airport->cityName }}</td>
-            </x-basic_info>
-            <x-basic_info>
-                <td class="text-sm font-medium leading-6 text-gray-900">Airport Code</td>
-                <td class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $airport->code }}</td>
-            </x-basic_info>
-            <x-basic_info>
-                <td class="text-sm font-medium leading-6 text-gray-900">Location</td>
-                <td class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">It's located <strong>{{ $airport->city ? 'Inside' : 'Outside'}}</strong> the city borders </td>
-            </x-basic_info>
+            
+                <x-basic-info class="border-2 border-red-400 px-2">
+                    <x-td-first>Warning</x-td-first>
+                    <x-td-second>There is more than 1 airport in {{ $airport->cityName }}. <br>Please make sure it's the one you're after (check the unique airport code below).</x-td-second>
+                </x-basic-info>
+            
+            <x-basic-info>
+                <x-td-first>Country name</x-td-first>
+                <x-td-second>{{ $airport->countryName }}</x-td-second>
+            </x-basic-info>
+            <x-basic-info>
+                <x-td-first>City name</x-td-first>
+                <x-td-second>{{ $airport->cityName }}</x-td-second>
+            </x-basic-info>
+            <x-basic-info>
+                <x-td-first>Airport Code</x-td-first>
+                <x-td-second>{{ $airport->code }}</x-td-second>
+            </x-basic-info>
+            <x-basic-info>
+                <x-td-first>Location</x-td-first>
+                <x-td-second>It's located <strong>{{ $airport->city ? 'Inside' : 'Outside'}}</strong> the city borders </x-td-first>
+            </x-basic-info>
 
-            <x-basic_info>
-                <td class="text-sm font-medium leading-6 text-gray-900">About</td>
-                <td class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</td>
-            </x-basic_info>
+            <x-basic-info>
+                <x-td-first>About</x-td-first>
+                <x-td-second>Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</x-td-second>
+            </x-basic-info>
         </dl>
     </div>
     </div>
