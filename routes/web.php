@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
 
 /*
@@ -26,3 +27,5 @@ Route::get('/about', function() {
 Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
 
 Route::get('/search', [SearchController::class, 'show']);
+
+Route::get('/register', [RegisterController::class, 'create']);
