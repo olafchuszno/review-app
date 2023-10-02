@@ -8,7 +8,7 @@ class RegisterController extends Controller
 {
     public function create()
     {
-        dd('register.create');
+        return view('register.create');
     }
 
     public function store()
