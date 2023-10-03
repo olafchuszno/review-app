@@ -1,7 +1,7 @@
 @props(['airport', 'other_airports'])
 <x-layout>
 
-<main class="flex flex-col items-center justify-center mt-10">
+<main class="flex flex-col items-center justify-center mt-1">
 
     <div class="flex justify-center">
         <svg class="mx-auto aspect-auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100px" height="100px" viewBox="0 0 100 100" fill="#3f51b5">
