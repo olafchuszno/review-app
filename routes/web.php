@@ -30,4 +30,4 @@ Route::get('/search', [SearchController::class, 'show']);
 
 Route::get('/register', [RegisterController::class, 'create']);
 
-Route::post('/register', [RegisterController::class, 'stores']);
+Route::post('/register', [RegisterController::class, 'store']);
