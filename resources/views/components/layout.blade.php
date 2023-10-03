@@ -39,9 +39,16 @@
                 </svg>
                 </button>
             </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex flex-shrink-0 items-center">
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            <div class="flex flex-1 items-center justify-center sm:justify-start">
+                <div class="flex items-center">
+                    <svg class="aspect-auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="70px" height="70px" viewBox="0 0 100 100" fill="#3f51b5">
+                        <!-- Curved Lines -->
+                        
+                        
+                        <!-- Circles -->
+                        <circle cx="30" cy="60" r="5" fill="#ff9800" />
+                        <circle cx="70" cy="60" r="5" fill="#ff9800" />
+                    </svg>
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
