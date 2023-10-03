@@ -29,3 +29,5 @@ Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
 Route::get('/search', [SearchController::class, 'show']);
 
 Route::get('/register', [RegisterController::class, 'create']);
+
+Route::post('/register', [RegisterController::class, 'stores']);
