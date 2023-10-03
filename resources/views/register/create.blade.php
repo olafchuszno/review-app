@@ -19,11 +19,11 @@
                 @csrf
 
                 <div class="flex justify-between">
-                    <x-form.input-field name="first name" required>
+                    <x-form.input-field name="first_name" required>
                         First name
                     </x-input-field>
 
-                    <x-form.input-field name="last name" required>
+                    <x-form.input-field name="last_name" required>
                         Surname
                     </x-input-field>
                 </div>
