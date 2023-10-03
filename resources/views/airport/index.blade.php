@@ -1,7 +1,7 @@
 @props(['airports'])
 <x-layout>
     <main>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-52">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
                 <div class="py-2 align-middle min-w-full sm:px-6 lg:px-8">
                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" style="width: 800px">

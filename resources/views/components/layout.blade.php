@@ -13,7 +13,7 @@
 </head>
 <body class="bg-slate-100">
 
-    <nav class="justify-between bg-indigo-800 border-b border-indigo-700 mb-20">
+    <nav class="justify-between bg-indigo-800 border-b border-indigo-700">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
