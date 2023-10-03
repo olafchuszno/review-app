@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class SearchController extends Controller
 {
 
-    public function search()
+    public function show()
     {
 
         $input = request('airport');
