@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -25,17 +27,21 @@ class RegisterController extends Controller
 
         // Check for the avatar
         if (isset($attributes['avatar'])) {
-
-            dd('avatar is set');
+            
+            $attributes['avatar'] = request()->file('avatar')->store('avatars');
         } else {
 
-            dd('avatar is not set');
+            $attributes['avatar'] = 'avatars/defaultAvatar.jpg';
         }
 
         // Create the user
+        $user = User::create($attributes);
 
         // Log the user in
+        auth()->login($user);
 
         // Redirect to the homepage
+        return redirect('/');
+
     }
 }
