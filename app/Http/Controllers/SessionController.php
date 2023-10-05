@@ -50,6 +50,7 @@ class SessionController extends Controller
         }
 
         // Authentication succeeded, log the user in
+        return redirect('/');
     }
 
     public function destroy()
