@@ -27,7 +27,7 @@ Route::get('/about', function() {
 
 Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
 
-Route::post('/search', [SearchController::class, 'show'])->middleware('auth');
+Route::post('/search', [SearchController::class, 'show']);
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
