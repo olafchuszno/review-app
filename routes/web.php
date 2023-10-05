@@ -30,9 +30,7 @@ Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
 Route::post('/search', [SearchController::class, 'show'])->middleware('auth');
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
-
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
 
 Route::get('/login', [SessionController::class, 'create'])->name('login')->middleware('guest');
-
 Route::post('/login', [SessionController::class, 'store'])->middleware('guest');
