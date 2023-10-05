@@ -29,10 +29,10 @@ Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
 
 Route::get('/search', [SearchController::class, 'show']);
 
-Route::get('/register', [RegisterController::class, 'create']);
+Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
 
-Route::post('/register', [RegisterController::class, 'store']);
+Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
 
-Route::get('/login', [SessionController::class, 'create']);
+Route::get('/login', [SessionController::class, 'create'])->middleware('guest');
 
-Route::post('/login', [SessionController::class, 'store']);
+Route::post('/login', [SessionController::class, 'store'])->middleware('guest');
