@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,7 @@ Route::get('/search', [SearchController::class, 'show']);
 Route::get('/register', [RegisterController::class, 'create']);
 
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [SessionController::class, 'create']);
+
+Route::get('/login', [SessionController::class, 'store']);
