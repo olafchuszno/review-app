@@ -33,6 +33,6 @@ Route::get('/register', [RegisterController::class, 'create']);
 
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/session', [SessionController::class, 'create']);
+Route::get('/login', [SessionController::class, 'create']);
 
-Route::post('/session', [SessionController::class, 'store']);
+Route::post('/login', [SessionController::class, 'store']);
