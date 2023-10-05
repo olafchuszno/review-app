@@ -15,7 +15,7 @@
         </div>
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form action="/register" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4">
+            <form action="/session" method="POST" class="flex flex-col gap-4">
                 @csrf
 
                 <x-form.input-field name="email_or_username" type="text" required>
