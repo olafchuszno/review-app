@@ -8,10 +8,10 @@
                         <table class="min-w-full divide-y divide-gray-200" width="820px">
                             <thead>
                                 <tr class="border-slate-300 border-2">
-                                    <th class="pl-8 py-4 whitespace-nowrap">Airport Code</th>
+                                    <th class="pl-4 py-4 whitespace-nowrap">Airport Code</th>
                                     <th class="py-2">Airport Name</th>
                                     <th class="py-2">Airport City</th>
-                                    <th class="py-2">Airport Country</th>
+                                    <th class="py-2 pr-4">Airport Country</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -35,7 +35,7 @@
                                             {{ $airport->cityName }}
                                         </div>
                                     </td>
-                                    <td class="py-4 whitespace-nowrap">
+                                    <td class="py-4 pr-4 whitespace-nowrap">
                                         <div class="flex justify-center">
                                             {{ $airport->countryName }}
                                         </div>
