@@ -8,7 +8,7 @@ class SessionController extends Controller
 {
     public function create()
     {
-        dd('session.create');
+        return view('session.create');
     }
 
     public function store()
