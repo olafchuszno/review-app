@@ -27,23 +27,33 @@
                         Surname
                     </x-input-field>
                 </div>
-
+                @if ($errors->get('first_name') || $errors->get('last_name'))
+                    <div class="flex justify-between text-xs">
+                        <x-form.error name="first_name" />
+                        <x-form.error name="last_name" />
+                    </div>
+                @endif
+                
                 <x-form.input-field name="avatar" type="file">
                     Avatar
                 </x-input-field>
+                <x-form.error name="avatar" />
 
                 <x-form.input-field name="username" required>
                     username
                 </x-input-field>
+                <x-form.error name="username" />
 
                 <x-form.input-field name="email" type="email" required>
                     email
                 </x-input-field>
+                <x-form.error name="email" />
 
                 <x-form.input-field name="password" label="password"
                     autocomplete="current-password" required type="password">
                     password
                 </x-form.input-field>
+                <x-form.error name="password" />
 
                 <div>
                     <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign up</button>
