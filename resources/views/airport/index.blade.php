@@ -4,14 +4,14 @@
         <div class="flex justify-center mt-28">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
                 <div class="py-2 align-middle min-w-full sm:px-6 lg:px-8">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" style="width: 800px">
+                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" style="width: 820px">
                         <table class="min-w-full divide-y divide-gray-200 mx-50">
                             <thead>
-                                <tr class="border-slate-300 border-2 py-3">
-                                    <th>Airport Code</th>
+                                <tr class="border-slate-300 border-2">
+                                    <th class="pl-4 py-2">Airport Code</th>
                                     <th>Airport Name</th>
                                     <th>Airport City</th>
-                                    <th>Airport Country</th>
+                                    <th class="pr-4 py-2">Airport Country</th>
                                 </tr>
                             </thead>
                             <tbody>
