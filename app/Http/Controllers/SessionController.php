@@ -50,7 +50,16 @@ class SessionController extends Controller
         }
 
         // Authentication succeeded, log the user in
+    }
 
+    public function destroy()
+    {
+        auth()->logout();
 
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect('/');
     }
 }
