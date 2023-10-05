@@ -1,1 +1,1 @@
-This is my first fully independent project. This web app allows users to share information, tips and their experiences about certain airports they visited or journeys they've been on.
+This web app is my first independent project. Its goal is to allow people to share helpful information, practical tips, and experiences of certain airports they visited or journeys they've been on.
