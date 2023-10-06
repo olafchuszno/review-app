@@ -15,18 +15,12 @@ class SearchController extends Controller
             'airport' => 'alpha'
         ])['airport'];
     
-        $airports = [];
-
-        $query = DB::table('airports')
+        $airports = DB::table('airports')
         ->where('code', 'like', '%'.$input.'%')
         ->orWhere('cityCode', 'like', '%'.$input.'%')
         ->orWhere('cityName', 'like', '%'.$input.'%')
         ->orWhere('countryName', 'like', '%'.$input.'%')
         ->get();
-
-        foreach ($query as $item) {
-            $airports[] = $item;
-        }
 
         return view('airport.index', [
             'airports' => $airports
