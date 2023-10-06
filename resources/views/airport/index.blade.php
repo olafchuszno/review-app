@@ -1,7 +1,14 @@
 @props(['airports'])
 <x-layout>
     <main>
-        <div class="flex justify-center mt-28">
+        <div class="text-center mt-16">
+            <x-style.logo />
+
+            <h1 class="text-3xl text-indigo-800">
+                Results for:  "{{ request('airport') }}"
+            </h1>
+        </div>
+        <div class="flex justify-center mt-16">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
                 <div class="py-2 align-middle min-w-full sm:px-6 lg:px-8">
                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
