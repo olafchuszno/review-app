@@ -32,7 +32,7 @@
                                     </td>
                                     <td class="py-4 whitespace-nowrap">
                                         <div class="flex justify-center">
-                                            <a href="airports/{{ $airport->code }}" class="text-blue-500">
+                                            <a href="airports/{{ $airport->code }}/basic_info" class="text-blue-500">
                                                 {{ $airport->name }}
                                             </a>
                                         </div>
