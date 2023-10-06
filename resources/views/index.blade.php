@@ -6,7 +6,7 @@
             </h2>
         </div>
         <div>
-            <form action="/search" method="GET" class="flex gap-4">
+            <form action="/search" method="POST" class="flex gap-4">
                 @csrf
 
                 <input name="airport" placeholder="e.g. LAX or Warsaw" class="text-indigo-900 px-3 py-1 rounded-2xl border-2 bg-slate-200" type="text">
