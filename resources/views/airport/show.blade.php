@@ -14,12 +14,17 @@
         </svg>
     </div>
 
-    <div class="w-2/3 gap-3 flex flex-col items-center">
+    <div class="w-2/3 gap-2 flex flex-col items-center">
 
-        <div class="px-4 sm:px-0">
-            <h3 class="text-base font-semibold leading-7 text-gray-900">{{ $airport->name }} Page</h3>
-            <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Basic information.</p> 
+        <div class="px-4 sm:px-0 flex flex-col items-center gap-3">
+            <h1 class="text-center text-3xl font-semibold leading-7 text-gray-900 ml-2">{{ $airport->name }} Page</h1>
+            
+            <div class="flex gap-2">
+                <a class="mt-1 text-lg leading-6 font-bold text-indigo-800">Basic information.</a> 
+                <a class="mt-1 text-lg leading-6 font-bold text-indigo-800">Main topics.</a> 
+            </div>
         </div>
+
         <div class="mt-6 border-t border-gray-100">
             <table class="divide-y divide-gray-100">
 
