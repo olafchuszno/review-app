@@ -11,7 +11,9 @@ class SearchController extends Controller
     public function show()
     {
 
-        $input = request('airport');
+        $input = request()->validate([
+            'airport' => 'alpha'
+        ])['airport'];
     
         $airports = [];
 
