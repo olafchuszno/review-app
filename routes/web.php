@@ -25,7 +25,7 @@ Route::get('/about', function() {
     return view('about');
 });
 
-Route::get('/airports/{airport:code}', [AirportController::class, 'show']);
+Route::get('/airports/{airport:code}/basic_info', [AirportController::class, 'show']);
 
 Route::post('/search', [SearchController::class, 'show']);
 
