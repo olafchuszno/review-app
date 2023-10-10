@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Topic extends Model
 {
     use HasFactory;
+
+
+    public function airport()
+    {
+        return $this->belongsTo(Airport::class, 'airport_id');
+    }
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
+    }
 }

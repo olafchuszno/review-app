@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 {
     use HasFactory;
+
+
+    public function topic()
+    {
+        return $this->belongsTo(Topic::class, 'topic_id');
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

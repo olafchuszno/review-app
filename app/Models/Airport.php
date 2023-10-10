@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Airport extends Model
 {
     use HasFactory;
+
+
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
