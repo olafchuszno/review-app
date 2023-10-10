@@ -19,10 +19,10 @@ class DatabaseSeeder extends Seeder
         DB::unprepared(file_get_contents('/Users/seiz/Downloads/sql/airports.sql'));
         $this->command->info('Airport table seeded!');
 
-        // User::factory(1)->create([
-        //     'first_name' => 'olaf',
-        //     'last_name' => 'olaf',
-        //     'email' => 'olaf@email.com',
-        // ]);
+        User::factory(1)->create([
+            'first_name' => 'olaf',
+            'last_name' => 'olaf',
+            'email' => 'olaf@email.com',
+        ]);
     }
 }
