@@ -9,6 +9,8 @@ class Airport extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
 
     public function topics()
     {
