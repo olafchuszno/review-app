@@ -6,7 +6,11 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'orangeLogo': '#ff9800',
+      },
+    },
   },
   plugins: [],
 }
