@@ -10,8 +10,12 @@ class TopicController extends Controller
 
     public function index(Airport $airport)
     {
+
+        $topics = $airport->topics()->get();
+
         return view('topic.index', [
-            'airport' => $airport
+            'airport' => $airport,
+            'topics' => $airport->topics()->get()
         ]);
     }
 }
