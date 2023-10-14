@@ -11,6 +11,11 @@ class Question extends Model
 
     protected $guarded = [];
 
+    public function contribution()
+    {
+        return $this->belongsTo(Contribution::class, 'contribution_id');
+    }
+
     public function topic()
     {
         return $this->belongsTo(Topic::class, 'topic_id');

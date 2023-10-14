@@ -12,13 +12,13 @@ class Answer extends Model
     protected $guarded = [];
 
 
-    public function topic()
+    public function contribution()
     {
-        return $this->belongsTo(Topic::class, 'topic_id');
+        return $this->belongsTo(Contribution::class, 'topic_id');
     }
 
-    public function author()
+    public function question()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Question::class);
     }
 }

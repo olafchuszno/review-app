@@ -11,6 +11,15 @@ class Airport extends Model
 
     protected $guarded = [];
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function contributions()
+    {
+        return $this->hasMany(Contribution::class);
+    }
 
     public function topics()
     {

@@ -13,7 +13,12 @@ class Topic extends Model
 
     public function airport()
     {
-        return $this->belongsTo(Airport::class, 'airport_id');
+        return $this->hasMany(Airport::class);
+    }
+
+    public function contributions()
+    {
+        return $this->hasMany(Contribution::class);
     }
 
     public function questions()
