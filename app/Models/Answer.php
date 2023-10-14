@@ -14,7 +14,7 @@ class Answer extends Model
 
     public function contribution()
     {
-        return $this->belongsTo(Contribution::class, 'topic_id');
+        return $this->belongsTo(Contribution::class, 'contribution_id');
     }
 
     public function question()
