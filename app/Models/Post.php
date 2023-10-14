@@ -9,6 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function airport()
     {
         return $this->belongsTo(Airport::class, 'airport_id');
