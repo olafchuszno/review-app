@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,9 @@ class ContributionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'topic_id' => Topic::factory(),
+            'user_id' => User::factory(),
+            'variant' => 'regular'
         ];
     }
 }

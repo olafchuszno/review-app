@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,9 @@ class QuestionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'topic_id' => Topic::factory(),
+            'body' => fake()->sentence(4),
+            'description' => fake()->sentence(10),
         ];
     }
 }
