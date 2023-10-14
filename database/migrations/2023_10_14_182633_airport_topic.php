@@ -11,7 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('airport_topic', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('airport_id')->constrained();
+            $table->foreignId('topic_id')->constrained();
+            $table->timestamps();
+        });
     }
 
     /**
