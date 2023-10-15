@@ -31,8 +31,8 @@ class Contribution extends Model
         return $this->belongsTo(Topic::class, 'topic_id');
     }
 
-    public function questions()
+    public function answers()
     {
-        return $this->hasMany(Question::class);
+        return $this->hasMany(Answer::class);
     }
 }
