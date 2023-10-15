@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Answer;
+use App\Models\Post;
 use App\Models\User;
 use App\Models\Topic;
 use Illuminate\Database\Seeder;
@@ -26,6 +27,8 @@ class DatabaseSeeder extends Seeder
             'last_name' => 'olaf',
             'email' => 'olaf@email.com',
         ]);
+
+        Post::factory(10)->create();
 
         Topic::factory(10)->create();
 
