@@ -27,9 +27,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'olaf@email.com',
         ]);
 
-        Topic::factory(10);
+        Topic::factory(10)->create();
 
-        Answer::factory(10);
+        Answer::factory(10)->create();
 
     }
 }
