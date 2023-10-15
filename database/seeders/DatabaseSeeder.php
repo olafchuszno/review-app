@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Answer;
 use App\Models\User;
+use App\Models\Topic;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -24,5 +26,10 @@ class DatabaseSeeder extends Seeder
             'last_name' => 'olaf',
             'email' => 'olaf@email.com',
         ]);
+
+        Topic::factory(10);
+
+        Answer::factory(10);
+
     }
 }
