@@ -34,5 +34,8 @@ class DatabaseSeeder extends Seeder
 
         Answer::factory(10)->create();
 
+        Answer::factory(10)->create([
+            'contribution_id' => 1
+        ]);
     }
 }

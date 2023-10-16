@@ -20,13 +20,13 @@ class ContributionFactory extends Factory
      */
     public function definition(): array
     {
-        $randomPost = rand(1, 10);
+        $random = rand(1, 10);
 
         return [
-            'user_id' => Post::find($randomPost)->user_id,
-            'post_id' => Post::find($randomPost)->id,
-            'airport_id' => Post::find($randomPost)->airport_id,
-            'topic_id' => Topic::factory(),
+            'user_id' => Post::find($random)->user_id,
+            'post_id' => Post::find($random)->id,
+            'airport_id' => Post::find($random)->airport_id,
+            'topic_id' => Topic::find($random)->id,
             'variant' => 'regular'
         ];
     }
