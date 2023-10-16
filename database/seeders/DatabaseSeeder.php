@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Answer;
 use App\Models\Post;
+use App\Models\Question;
 use App\Models\User;
 use App\Models\Topic;
 use Illuminate\Database\Seeder;
@@ -34,8 +35,8 @@ class DatabaseSeeder extends Seeder
 
         Answer::factory(10)->create();
 
-        Answer::factory(10)->create([
-            'contribution_id' => 1
+        Question::factory(10)->create([
+            'topic_id' => 1
         ]);
     }
 }
