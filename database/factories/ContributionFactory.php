@@ -23,10 +23,10 @@ class ContributionFactory extends Factory
         $random = rand(1, 10);
 
         return [
-            'user_id' => Post::find($random)->user_id,
-            'post_id' => Post::find($random)->id,
-            'airport_id' => Post::find($random)->airport_id,
-            'topic_id' => Topic::find($random)->id,
+            'user_id' => User::factory(),
+            'post_id' => Post::factory(),
+            'airport_id' => 1,
+            'topic_id' => Topic::factory(),
             'variant' => 'regular'
         ];
     }

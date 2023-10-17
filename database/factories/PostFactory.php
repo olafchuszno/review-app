@@ -18,7 +18,7 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'airport_id' => rand(1, 4400),
+            'airport_id' => 1,
             'user_id' => User::factory(),
             'title' => fake()->sentence(5),
             'body' => fake()->text()
