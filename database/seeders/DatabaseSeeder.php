@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Answer;
+use App\Models\Contribution;
 use App\Models\Post;
 use App\Models\Question;
 use App\Models\User;
@@ -23,20 +24,43 @@ class DatabaseSeeder extends Seeder
         DB::unprepared(file_get_contents('/Users/seiz/Downloads/sql/airports.sql'));
         $this->command->info('Airport table seeded!');
 
+        // Create the first User
         User::factory(1)->create([
             'first_name' => 'olaf',
             'last_name' => 'olaf',
             'email' => 'olaf@email.com',
         ]);
 
-        Post::factory(10)->create();
+        // Create 10 Posts
+        Post::factory(10)->create([
+            'user_id' => 1
+        ]);
 
+        // Create 10 Topics
         Topic::factory(10)->create();
 
-        Answer::factory(10)->create();
-
+        // Create 10 questions for the 1st Topic
         Question::factory(10)->create([
             'topic_id' => 1
         ]);
+
+
+
+        // Create one Contribution for the 1st Airport and 1st Topic BY the 1st User
+        Contribution::factory()->create([
+            'user_id' => 1,
+            'post_id' => 1,
+            'topic_id' => 1
+        ]);
+
+        // Create 10 answers for the 1st contribution, answering all the 10 questions
+        for ($x = 1; $x <= 10; $x++) {
+
+            Answer::factory()->create([
+                'question_id' => $x,
+                'contribution_id' => 1
+            ]);
+        }
+
     }
 }
