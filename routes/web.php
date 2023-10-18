@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
+use App\Http\Controllers\ContributionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SessionController;
@@ -40,4 +41,4 @@ Route::delete('/session', [SessionController::class, 'destroy'])->middleware('au
 
 Route::get('/airports/{airport:code}/main_topics', [TopicController::class, 'index']);
 
-Route::get('/airports/{airport:code}/topics/{topic:name}', [Contribution::class, 'index']);
+Route::get('/airports/{airport:code}/topics/{topic:name}', [ContributionController::class, 'index']);
