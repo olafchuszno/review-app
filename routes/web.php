@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\TopicController;
+use App\Models\Contribution;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,5 @@ Route::post('/login', [SessionController::class, 'store'])->middleware('guest');
 Route::delete('/session', [SessionController::class, 'destroy'])->middleware('auth');
 
 Route::get('/airports/{airport:code}/main_topics', [TopicController::class, 'index']);
+
+Route::get('/airports/{airport:code}/topics/{topic:name}', [Contribution::class, 'index']);
