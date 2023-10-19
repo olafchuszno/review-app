@@ -23,6 +23,6 @@ class Airport extends Model
 
     public function topics()
     {
-        return $this->hasMany(Topic::class);
+        return $this->belongsToMany(Topic::class);
     }
 }
