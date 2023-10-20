@@ -21,8 +21,9 @@ class Airport extends Model
         return $this->hasMany(Contribution::class);
     }
 
-    public function topics()
+    public function getRouteKeyName()
     {
-        return $this->belongsToMany(Topic::class);
+        return 'code';
     }
+
 }
