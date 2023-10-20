@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Airport;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class ContributionController extends Controller
 {
-    public function index()
+    public function index(Airport $airport, Topic $topic)
     {
-        dd('contribution.index');
+        return view('contribution.index', [
+            'topic' => $topic,
+            'airport' => $airport
+        ]);
     }
 }
