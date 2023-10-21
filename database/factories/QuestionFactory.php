@@ -20,7 +20,7 @@ class QuestionFactory extends Factory
     {
         return [
             'topic_id' => Topic::factory(),
-            'body' => fake()->sentence(4),
+            'body' => fake()->words(4, true) . '?',
             'description' => fake()->sentence(10),
         ];
     }
