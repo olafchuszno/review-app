@@ -37,13 +37,13 @@ class AirportController extends Controller
         // Check for other airports in the area
         if ($airport->numAirports > 1) {
             $other_airports = DB::table('airports')->
-            where(['cityCode' => $airport->cityCode])->
-            get();
+            where('cityCode', $airport->cityCode)->whereNot('code', $airport->code)->get();
         }
 
         return view('airport.show', [
             'airport' => $airport,
-            'other_airports' => $other_airports
+            'other_airports' => $other_airports,
+            'other_airports_num' => $airport->numAirports - 1
         ]);
     }
 }
