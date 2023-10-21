@@ -23,16 +23,20 @@
         <div class="mt-6 border-t border-gray-100">
             <table class="divide-y divide-gray-100">
 
-                @if ($airport->numAirports > 1)
+                @if ($other_airports_num != 0)
                     <x-basic-info class="border-2 border-red-400 px-2">
                         <x-td-first>Warning</x-td-first>
                         <x-td-second>There is more than 1 airport in {{ $airport->cityName }}. <br>
                             Please make sure it's the one you're after (check the unique airport code below). <br>
                             Other Airports in the area:
                             @foreach ($other_airports as $other_airport)
-                                <a href="{{ $other_airport->code }}"
+                                <strong>{{ $other_airport->name }} (<a href="/airports/{{ $other_airport->code }}/basic_info"
                                     class="text-blue-500"
-                                >{{ $other_airport->code }}</a>
+                                >{{ $other_airport->code }}</a>)</strong>
+                                @if ($loop->iteration < $other_airports_num)
+                                    ,
+                                @endif
+
                             @endforeach
                     
                     </x-td-second>
