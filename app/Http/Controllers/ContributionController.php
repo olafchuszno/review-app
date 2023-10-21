@@ -15,7 +15,7 @@ class ContributionController extends Controller
             'topic' => $topic,
             'airport' => $airport,
             'questions' => $topic->questions,
-            'contributions' => Contribution::where('topic_id', $topic->id)->where('airport_id', $airport->id)->get()
+            'contributions' => Contribution::where('topic_id', $topic->id)->where('airport_id', $airport->id)->paginate(1)
         ]);
     }
 }
