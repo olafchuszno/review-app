@@ -30,10 +30,16 @@
                             Please make sure it's the one you're after (check the unique airport code below). <br>
                             Other Airports in the area:
                             @foreach ($other_airports as $other_airport)
-                                <strong>{{ $other_airport->name }} (<a href="/airports/{{ $other_airport->code }}/basic_info"
-                                    class="text-blue-500"
-                                >{{ $other_airport->code }}</a>)</strong>
-                                @if ($loop->iteration < $other_airports_num)
+                                <strong>
+                                    {{ $other_airport->name }} (
+                                    <a href="/airports/{{ $other_airport->code }}/basic_info"
+                                        class="text-blue-500"
+                                    >
+                                        {{ $other_airport->code }}
+                                    </a>)
+                                </strong>
+
+                                @if (! $loop->last)
                                     ,
                                 @endif
 
