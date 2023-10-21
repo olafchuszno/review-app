@@ -53,13 +53,22 @@ class DatabaseSeeder extends Seeder
             'topic_id' => 1
         ]);
 
-        // Create 10 answers for the 1st contribution, answering all the 10 questions
-        for ($x = 1; $x <= 10; $x++) {
+        Contribution::factory()->create([
+            'post_id' => 1,
+            'topic_id' => 1
+        ]);
 
-            Answer::factory()->create([
-                'question_id' => $x,
-                'contribution_id' => 1
-            ]);
+        // For the 1st and 2nd contribution,
+        for ($y = 1; $y < 3; $y++) {
+
+            // Create answers for all the 10 questions
+            for ($x = 1; $x <= 10; $x++) {
+
+                Answer::factory()->create([
+                    'question_id' => $x,
+                    'contribution_id' => $y
+                ]);
+            }
         }
 
     }
