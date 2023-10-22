@@ -8,7 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'orangeLogo': '#ff9800',
+        'primaryOrange': '#f97316',
+
+        'primaryIndigo' : '#4f46e5',
+        'secondaryIndigo' : '#312e81',
+        'softIndigo' : '#6366f1',
+        'neutralIndigo' : '#e0e7ff'
       },
     },
   },
