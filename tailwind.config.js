@@ -13,7 +13,9 @@ export default {
         'primaryIndigo' : '#4f46e5',
         'secondaryIndigo' : '#312e81',
         'softIndigo' : '#6366f1',
-        'neutralIndigo' : '#e0e7ff'
+        'neutralIndigo' : '#e0e7ff',
+
+        'neutralStone' : '#e7e5e4'
       },
     },
   },
