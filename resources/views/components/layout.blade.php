@@ -51,12 +51,12 @@
                     </svg>
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 items-center">
                     
                     <!-- Navbar Left links -->
-                    <a href="/" class="{{ request()->is('/') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-md font-medium">Airport Search</a>
-                    <a href="#" class="text-white hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2 text-md font-medium">Journey Search</a>
-                    <a href="/about" class="{{ request()->is('about') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-md font-medium">About</a>
+                    <a href="/" class="{{ request()->is('/') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">Airport Search</a>
+                    <a href="#" class="{{ request()->is('/journey_search') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">Journey Search</a>
+                    <a href="/about" class="{{ request()->is('/about') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">About</a>
                     
                 </div>
                 </div>
@@ -108,10 +108,10 @@
             @endauth
             @guest
                 <div class="mx-10">
-                    <a href="/register" class="text-white hover:bg-indigo-600 hover:text-white rounded-md pl-3 pr-2 py-2 text-lg font-medium" >
+                    <a href="/register" class="{{ request()->is('register') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full pl-4 pr-3 py-2 text-xl font-bold">
                         Register
                     </a>
-                    <a href="/login" class="text-white hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2 text-lg font-medium ml-2" >
+                    <a href="/login" class="{{ request()->is('login') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-xl font-bold ml-2">
                         Log in
                     </a>
                 </div>
