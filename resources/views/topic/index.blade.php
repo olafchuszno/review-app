@@ -1,25 +1,13 @@
 <x-layout>
-        <x-main-logo>
+    <x-main-airport :airport="$airport">
 
-            <div class="gap-2 flex flex-col items-center">
+        <x-topic-grid>
 
-                <div class="mb-20 px-4 sm:px-0 flex flex-col items-center gap-3">
-                    <h1 class="text-center text-3xl font-semibold leading-7 ml-2">{{ $airport->name }} Page</h1>
-                    
-                    <div class="flex gap-1">
-                        <x-section-links :airport="$airport"/>
-                    </div>
-                </div>
+            @foreach ($topics as $topic)
+                <x-topic-link href="/airports/{{ $airport->code }}/topics/{{ $topic->name }}">{{ $topic->name }}</x-topic-link>
+            @endforeach
 
-                <x-topic-grid>
-
-                    @foreach ($topics as $topic)
-                        <x-topic-link href="/airports/{{ $airport->code }}/topics/{{ $topic->name }}">{{ $topic->name }}</x-topic-link>
-                    @endforeach
-
-                </x-topic-grid>
+        </x-topic-grid>
         
-            </div>
-
-        </x-main-logo>
+    </x-main-airport>
 </x-layout>
