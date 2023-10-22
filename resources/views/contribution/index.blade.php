@@ -1,15 +1,6 @@
 <x-layout>
 
-<x-main-logo class="flex flex-col items-center mt-6 mb-20">
-
-    <div class="px-4 sm:px-0 flex flex-col items-center gap-3 mb-8">
-        <h1 class="text-center text-3xl font-semibold leading-7 ml-2">{{ $airport->name }} Page</h1>
-        
-        <div class="flex gap-1">
-            <x-section-links :airport="$airport"/>
-            <x-section-link href="" requestIs="*/topics*">{{ $topic->name }}</x-section-link>
-        </div>
-    </div>
+<x-main-airport :airport="$airport" :topic="$topic">
 
     <div class="flex flex-col w-2/3 items-center mt-8">
 
@@ -46,6 +37,6 @@
         
     </div>
     
-</x-main-logo>
+</x-main-airport>
 
 </x-layout>
