@@ -15,7 +15,7 @@ export default {
         'softIndigo' : '#6366f1',
         'neutralIndigo' : '#e0e7ff',
 
-        'neutralStone' : '#e7e5e4'
+        'neutralStone' : '#d6d3d1'
       },
     },
   },
