@@ -11,9 +11,9 @@
     <title>Homepage</title>
 
 </head>
-<body class="bg-indigo-900 text-indigo-100">
+<body class="bg-secondaryIndigo text-indigo-100">
 
-    <nav class="justify-between bg-indigo-800 border-b-2 border-indigo-700">
+    <nav class="justify-between bg-primaryIndigo border-b-2 border-indigo-700">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -46,8 +46,8 @@
                         
                         
                         <!-- Circles -->
-                        <circle cx="30" cy="60" r="5" fill="#ff9800" />
-                        <circle cx="70" cy="60" r="5" fill="#ff9800" />
+                        <circle cx="30" cy="60" r="5" fill="#f97316" />
+                        <circle cx="70" cy="60" r="5" fill="#f97316" />
                     </svg>
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
