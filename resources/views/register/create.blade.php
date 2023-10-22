@@ -11,7 +11,7 @@
             <form action="/register" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4">
                 @csrf
 
-                <div class="flex justify-between">
+                <div class="flex gap-2 justify-between">
                     <x-form.input-field name="first_name" required>
                         First name
                     </x-input-field>
@@ -27,7 +27,7 @@
                     </div>
                 @endif
                 
-                <x-form.input-field name="avatar" type="file">
+                <x-form.input-field name="avatar" type="file" input_class="text-indigo-100">
                     Avatar
                 </x-input-field>
                 <x-form.error name="avatar" />
