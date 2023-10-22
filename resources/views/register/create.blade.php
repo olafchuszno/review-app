@@ -4,7 +4,7 @@
             <x-style.logo />
 
 
-            <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Create an New account</h2>
+            <h2 class="text-center text-2xl font-bold leading-9 tracking-tight">Create an New account</h2>
         </div>
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">

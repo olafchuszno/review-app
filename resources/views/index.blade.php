@@ -3,9 +3,9 @@
         <div class="mt-20">
             <x-style.logo size="150px"/>
         </div>
-        <div class="py-10 mx-auto max-w-xl rounded-full bg-indigo-700 flex flex-col gap-7 items-center">
+        <div class="py-14 mx-auto max-w-xl rounded-full bg-indigo-600 flex flex-col gap-7 items-center">
             <div>
-                <h2 class="text-3xl text-white">
+                <h2 class="text-3xl text-slate-100">
                     Which airport are we looking for?
                 </h2>
             </div>

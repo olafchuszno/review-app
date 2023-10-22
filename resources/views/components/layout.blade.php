@@ -11,7 +11,7 @@
     <title>Homepage</title>
 
 </head>
-<body class="bg-slate-100">
+<body class="bg-indigo-900 text-indigo-100">
 
     <nav class="justify-between bg-indigo-800 border-b border-indigo-700">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
@@ -54,9 +54,9 @@
                 <div class="flex space-x-4">
                     
                     <!-- Navbar Left links -->
-                    <a href="/" class="{{ request()->is('/') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">Airport Search</a>
-                    <a href="#" class="text-white hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Journey Search</a>
-                    <a href="/about" class="{{ request()->is('about') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-sm font-medium">About</a>
+                    <a href="/" class="{{ request()->is('/') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-md font-medium">Airport Search</a>
+                    <a href="#" class="text-white hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2 text-md font-medium">Journey Search</a>
+                    <a href="/about" class="{{ request()->is('about') ? 'bg-indigo-600' : 'hover:bg-indigo-600' }} text-white rounded-lg px-3 py-2 text-md font-medium">About</a>
                     
                 </div>
                 </div>

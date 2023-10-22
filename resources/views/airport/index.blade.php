@@ -4,7 +4,7 @@
         <div class="text-center mt-16">
             <x-style.logo />
 
-            <h1 class="text-3xl text-indigo-800">
+            <h1 class="text-3xl text-indigo-100">
                 Results for:  "{{ request('airport') }}"
             </h1>
         </div>

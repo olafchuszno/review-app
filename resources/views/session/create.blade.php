@@ -4,7 +4,7 @@
             <x-style.logo />
 
 
-            <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Log in to your account</h2>
+            <h2 class="text-center text-2xl font-bold leading-9 tracking-tight">Log in to your account</h2>
         </div>
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -23,7 +23,7 @@
                 <x-form.error name="password" />
 
                 <div>
-                    <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Log in</button>
+                    <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Log in</button>
                 </div>
             </form>
 
