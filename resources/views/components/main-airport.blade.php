@@ -5,7 +5,10 @@
         
         <div class="flex gap-1">
             <x-section-links :airport="$airport"/>
-            <x-section-link href="" requestIs="*/topics*">{{ $topic->name }}</x-section-link>
+
+            @if (isset($topic))
+                <x-section-link href="" requestIs="*/topics*">{{ $topic->name }}</x-section-link>
+            @endif
         </div>
     </div>
 
