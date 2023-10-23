@@ -18,4 +18,9 @@ class ContributionController extends Controller
             'contributions' => Contribution::where('topic_id', $topic->id)->where('airport_id', $airport->id)->paginate(3)
         ]);
     }
+
+    public function create()
+    {
+        return view('contribution.create');
+    }
 }
