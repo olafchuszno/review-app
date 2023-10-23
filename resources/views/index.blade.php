@@ -14,7 +14,7 @@
                     @csrf
 
                     <input name="airport" placeholder="e.g. LAX or Warsaw" class="text-primaryIndigo text-lg font-bold placeholder:font-bold px-3 py-1 rounded-2xl bg-neutralStone" type="text">
-                    <button type="submit" class="text-neutralStone font-bold px-6 py-1 rounded-2xl bg-primaryOrange">Let's go!</button>
+                    <button type="submit" class="text-neutralIndigo font-bold px-6 py-1 rounded-2xl bg-primaryOrange">Let's go!</button>
                 </form>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <x-main-logo class="flex flex-col items-center mt-6 mb-20">
 
     <div class="px-4 sm:px-0 flex flex-col items-center gap-3 mb-8">
-        <h1 class="text-center text-3xl font-semibold leading-7 ml-2">{{ $airport->name }} Page</h1>
+        <h1 class="text-center text-primaryOrange text-3xl font-semibold leading-7 ml-2">{{ $airport->name }} Page</h1>
         
         <div class="flex gap-1">
             <x-section-links :airport="$airport"/>

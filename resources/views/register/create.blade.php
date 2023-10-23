@@ -3,8 +3,7 @@
         <div class="">
             <x-style.logo />
 
-
-            <h2 class="text-center text-neutralStone text-3xl font-bold leading-9 tracking-tight">Create an New account</h2>
+            <h1 class="text-center text-primaryOrange text-3xl font-bold leading-9 tracking-tight">Create an New account</h1>
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">

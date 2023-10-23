@@ -9,7 +9,7 @@
             <div class="p-5 border rounded-2xl border-slate-300 bg-indigo-300 flex flex-col items-center mb-10">
 
                 @if ($loop->first)
-                    <p class="py-3 text-2xl text-slate-200 w-2/5 bg-indigo-700  rounded-full font-semibold text-center my-5">
+                    <p class="py-3 text-2xl text-stone-200 w-2/5 bg-secondaryOrange font-bold rounded-full text-center my-5">
                         The most relevant contribution
                     </p>
                 @endif

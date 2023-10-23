@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         'primaryOrange': '#f97316',
+        'secondaryOrange' : '#ea580c',
 
         'primaryIndigo' : '#4f46e5',
         'secondaryIndigo' : '#312e81',
