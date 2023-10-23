@@ -42,3 +42,5 @@ Route::delete('/session', [SessionController::class, 'destroy'])->middleware('au
 Route::get('/airports/{airport:code}/main_topics', [TopicController::class, 'index']);
 
 Route::get('/airports/{airport}/topics/{topic}', [ContributionController::class, 'index']);
+
+Route::get('/airports/{airport}/create_contribution', [ContributionController::class, 'create']);
