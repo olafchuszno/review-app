@@ -19,8 +19,10 @@ class ContributionController extends Controller
         ]);
     }
 
-    public function create()
+    public function create(Airport $airport)
     {
-        return view('contribution.create');
+        return view('contribution.create', [
+            'airport' => $airport
+        ]);
     }
 }
