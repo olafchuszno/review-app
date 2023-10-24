@@ -22,7 +22,8 @@ class ContributionController extends Controller
     public function create(Airport $airport)
     {
         return view('contribution.create', [
-            'airport' => $airport
+            'airport' => $airport,
+            'topics' => Topic::all()
         ]);
     }
 }
