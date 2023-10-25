@@ -43,4 +43,6 @@ Route::get('/airports/{airport:code}/main_topics', [TopicController::class, 'ind
 
 Route::get('/airports/{airport}/topics/{topic}', [ContributionController::class, 'index']);
 
-Route::get('/airports/{airport}/create_contribution', [ContributionController::class, 'create']);
+Route::get('/airports/{airport}/contribute', [ContributionController::class, 'choose_category']);
+
+Route::post('/airports/{airport}/contribute', [ContributionController::class, 'create']);
