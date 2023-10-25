@@ -19,11 +19,17 @@ class ContributionController extends Controller
         ]);
     }
 
-    public function create(Airport $airport)
+    public function choose_category(Airport $airport)
     {
-        return view('contribution.create', [
+        return view('contribution.choose_category', [
             'airport' => $airport,
             'topics' => Topic::all()
         ]);
     }
+
+    public function create()
+    {
+
+    }
+
 }
