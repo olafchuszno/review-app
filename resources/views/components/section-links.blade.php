@@ -13,8 +13,8 @@
     Main topics.
 </x-section-link>
 <x-section-link
-    href="/airports/{{ $airport->code }}/create_contribution"
-    requestIs="*create_contribution"
+    href="/airports/{{ $airport->code }}/contribute"
+    requestIs="*contribute"
     class="mr-1"
 >
     Contribute
