@@ -14,7 +14,7 @@
                         Choose the category:
                     </p>
 
-                    <select class="text-indigo-400 bg-secondaryIndigo px-3 rounded-2xl text-center text-lg font-extrabold">
+                    <select name="topic" class="text-indigo-400 bg-secondaryIndigo px-3 rounded-2xl text-center text-lg font-extrabold">
                         @foreach ($topics as $topic)
                             <option value="{{ $topic->id }}">{{ $topic->name }}</option>
                         @endforeach
