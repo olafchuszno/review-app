@@ -5,7 +5,7 @@
         
         <div class="mt-20 bg-indigo-400 rounded-3xl px-6 py-10 sm:mx-auto sm:w-full sm:max-w-lg">
 
-            <form action="/airports/{{$airport->code}}/contriadbute" method="POST" enctype="multipart/form-data" class="flex items-center flex-col gap-4">
+            <form action="/airports/{{$airport->code}}/contribute" method="POST" enctype="multipart/form-data" class="flex items-center flex-col gap-4">
                 @csrf
 
                 <div class="flex gap-6 justify-start align-start">
