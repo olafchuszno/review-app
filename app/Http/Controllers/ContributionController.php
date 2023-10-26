@@ -27,9 +27,15 @@ class ContributionController extends Controller
         ]);
     }
 
-    public function create()
+    public function create(Airport $airport)
     {
+        $topic = Topic::findOrFail(request('topic'));
 
+        return view('contribution.create', [
+            'airport' => $airport,
+            'topic' => $topic,
+            'questions' => $topic->questions
+        ]);
     }
 
 }
