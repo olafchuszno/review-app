@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
+use App\Http\Controllers\ChooseCategoryController;
 use App\Http\Controllers\ContributionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
@@ -45,4 +46,4 @@ Route::get('/airports/{airport}/topics/{topic}', [ContributionController::class,
 
 Route::get('/airports/{airport}/contribute', [ContributionController::class, 'choose_category']);
 
-Route::post('/airports/{airport}/contribute', [ContributionController::class, 'create']);
+Route::get('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'create']);
