@@ -1,34 +1,19 @@
 <x-layout>
-    <x-main-logo>
+    <x-main-airport :airport="$airport">
 
-        <h1 class="text-center text-primaryOrange text-3xl font-bold leading-9 tracking-tight">Contribute. With knowledge!</h1>
+        <h1 class="text-stone-200 text-2xl font-bold mb-12 px-4 py-2 rounded-2xl bg-indigo-600">
+            Choose the category of your contribution
+        </h1>
+
+        <x-topic-grid>
+
+            @foreach ($topics as $topic)
+                <x-topic-link text="text-primaryOrange" href="/airports/{{ $airport->code }}/contribute/{{ $topic->name }}">
+                    {{ $topic->name }}
+                </x-topic-link>
+            @endforeach
+
+        </x-topic-grid>
         
-        <div class="mt-20 bg-indigo-400 rounded-3xl px-6 py-10 sm:mx-auto sm:w-full sm:max-w-lg">
-
-            <form action="/airports/{{$airport->code}}/contribute" method="POST" enctype="multipart/form-data" class="flex items-center flex-col gap-4">
-                @csrf
-
-                <div class="flex gap-6 justify-start align-start">
-
-                    <p class="text-2xl text-indigo-400 bg-secondaryIndigo font-bold rounded-2xl px-5 py-2">
-                        Choose the category:
-                    </p>
-
-                    <select name="topic" class="text-indigo-400 bg-secondaryIndigo px-3 rounded-2xl text-center text-lg font-extrabold">
-                        @foreach ($topics as $topic)
-                            <option value="{{ $topic->id }}">{{ $topic->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mt-2">
-                    <button type="submit" class="bg-primaryOrange text-indigo-600 px-14 py-2 rounded-xl text-lg font-extrabold leading-6 shadow-sm hover:text-indigo-500 hover:bg-stone-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Next
-                    </button>
-                </div>
-            </form>
-
-        </div>
-
-    </x-main-logo>
+    </x-main-airport>
 </x-layout>
