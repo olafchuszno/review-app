@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('contributions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('post_id')->constrained();
+            $table->foreignId('post_id')->nullable()->constrained();
             $table->foreignId('airport_id')->constrained();
             $table->foreignId('topic_id')->constrained();
-            $table->string('variant')->nullable();
+            $table->string('variant')->default('regular');
             $table->timestamps();
         });
     }
