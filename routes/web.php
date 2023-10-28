@@ -47,3 +47,5 @@ Route::get('/airports/{airport}/topics/{topic}', [ContributionController::class,
 Route::get('/airports/{airport}/contribute', [ContributionController::class, 'choose_category']);
 
 Route::get('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'create']);
+
+Route::post('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'store']);
