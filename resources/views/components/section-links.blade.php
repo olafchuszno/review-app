@@ -14,7 +14,7 @@
 </x-section-link>
 <x-section-link
     href="/airports/{{ $airport->code }}/contribute"
-    requestIs="*contribute"
+    requestIs="*contribute*"
     class="mr-1"
 >
     Contribute
