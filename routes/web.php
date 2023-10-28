@@ -44,8 +44,8 @@ Route::get('/airports/{airport:code}/main_topics', [TopicController::class, 'ind
 
 Route::get('/airports/{airport}/topics/{topic}', [ContributionController::class, 'index']);
 
-Route::get('/airports/{airport}/contribute', [ContributionController::class, 'choose_category']);
+Route::get('/airports/{airport}/contribute', [ContributionController::class, 'choose_category'])->middleware('auth');
 
-Route::get('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'create']);
+Route::get('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'create'])->middleware('auth');
 
-Route::post('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'store']);
+Route::post('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'store'])->middleware('auth');
