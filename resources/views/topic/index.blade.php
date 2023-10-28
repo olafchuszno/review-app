@@ -8,9 +8,7 @@
         <x-topic-grid>
 
             @foreach ($topics as $topic)
-                <x-topic-link href="/airports/{{ $airport->code }}/topics/{{ $topic->name }}"
-                    class="hover:bg-neutralIndigo hover:text-primaryOrange"    
-                >
+                <x-topic-link href="/airports/{{ $airport->code }}/topics/{{ $topic->name }}">
                     {{ $topic->name }}
                 </x-topic-link>
             @endforeach
