@@ -9,7 +9,7 @@
 
         <div class="bg-primaryIndigo py-14 px-20 mt-10 mb-10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-lg">
 
-            <form action="/airports/{{$airport->code}}/contribute" method="POST" class="flex flex-col gap-2">
+            <form action="/airports/{{ $airport->code }}/contribute/{{ $topic->name }}" method="POST" class="flex flex-col gap-2">
                 @csrf
 
                 @foreach ($questions as $question)
