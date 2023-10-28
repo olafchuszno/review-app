@@ -1,7 +1,7 @@
 <x-layout>
     <x-main-airport :airport="$airport">
 
-        <h1 class="text-stone-200 text-2xl font-bold mb-12 px-4 py-2 rounded-2xl bg-indigo-600">
+        <h1 class="text-primaryIndigo text-2xl font-bold mb-12 px-4 py-2 rounded-2xl bg-neutralIndigo">
             Choose the category of your contribution
         </h1>
 
