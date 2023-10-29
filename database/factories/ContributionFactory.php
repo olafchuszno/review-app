@@ -24,7 +24,6 @@ class ContributionFactory extends Factory
 
         return [
             'user_id' => User::factory(),
-            'post_id' => Post::factory(),
             'airport_id' => 1,
             'topic_id' => Topic::factory(),
             'variant' => 'regular'
