@@ -10,9 +10,11 @@
         <div class="bg-primaryIndigo py-14 px-20 mt-10 mb-10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-lg">
 
             @if ($errors->any())
-                <p class="text-2xl font-bold bg-secondaryOrange text-stone-100 px-6 py-2 mb-6 rounded-2xl">
-                    There were some issues...
-                </p>
+                @foreach ($errors->all() as $error)
+                    <p class="text-2xl font-bold bg-secondaryOrange text-stone-100 px-6 py-2 mb-6 rounded-2xl">
+                        {{ $error }}
+                    </p>
+                @endforeach
             @endif
 
             <form action="/airports/{{ $airport->code }}/contribute/{{ $topic->name }}" method="POST" class="flex flex-col gap-2">
@@ -24,8 +26,8 @@
                             {{ $question->body }}
                         </p>
 
-                        <textarea name="{{ $question->id }}" class="px-4 py-2 text-lg text-secondaryOrange bg-stone-100 rounded-3xl" required>{{ old($question->id) }}</textarea>
-                        <x-form.error name="{{ $question->id }}" />
+                        <textarea name="{{ $question->short }}" class="px-4 py-2 text-lg text-secondaryOrange bg-stone-100 rounded-3xl" required>{{ old($question->id) ?? 'ukdkh' }}</textarea>
+                        <x-form.error name="{{ $question->short }}" />
                     </div>
                 @endforeach
 
