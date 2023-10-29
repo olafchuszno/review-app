@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('topic_id')->constrained()->onUpdate('cascade');
+            $table->string('short');
             $table->string('body');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }
