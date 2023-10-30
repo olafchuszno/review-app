@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Airport;
 use App\Models\Answer;
 use App\Models\Contribution;
-use App\Models\Question;
 use App\Models\Topic;
-use Exception;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 
 class ContributionController extends Controller
@@ -42,19 +40,17 @@ class ContributionController extends Controller
 
     public function store(Airport $airport, Topic $topic)
     {
-        // Get ids of all questions that belong to the topic
-        $question_shorts = $topic->questions->pluck('short');
-
-        // Get ids of all questions that belong to the topic
+        // Get id's of all topic's questions
         $question_ids = $topic->questions->pluck('id');
         
-        
         // Validate the answers
-        foreach($question_shorts as $question_short) {
+        $answers = request()->validate([
+            'answer.*' => ['required', 'min:1', 'max:500']
+        ])['answer'];
 
-            $answers[] = request()->validate([
-                $question_short => ['required', 'min:1', 'max:500']
-            ]);
+        if (count($answers) != count($question_ids)) {
+
+            throw ValidationException::withMessages(['failed' => 'All questions need to be answered']);
         }
 
         // Create the Contribution
@@ -66,12 +62,12 @@ class ContributionController extends Controller
         ]);
 
         // Create the Answers
-        foreach (range(0, count($answers)-1) as $x) {
+        for ($x = 0; $x < count($question_ids) ; $x++) {
 
             Answer::factory()->create([
                 'contribution_id' => $contribution->id,
                 'question_id' => $question_ids[$x],
-                'body' => array_values($answers[$x])[0]
+                'body' => $answers[$x]
             ]);
         }
 
