@@ -7,7 +7,7 @@
             </h1>
         </div>
 
-        <div class="bg-primaryIndigo py-14 px-20 mt-10 mb-10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-lg">
+        <div class="bg-primaryIndigo py-14 px-20 mt-10 mb-10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-4xl">
 
             @if ($errors->any())
                 @foreach ($errors->all() as $error)
@@ -17,17 +17,17 @@
                 @endforeach
             @endif
 
-            <form action="/airports/{{ $airport->code }}/contribute/{{ $topic->name }}" method="POST" class="flex flex-col gap-2">
+            <form action="/airports/{{ $airport->code }}/contribute/{{ $topic->name }}" method="POST" class="flex flex-wrap justify-evenly items-end gap-8">
                 @csrf
 
                 @foreach ($questions as $question)
-                    <div class="mb-8 flex flex-col gap-3">
+                    <div class="mb-8 flex flex-col gap-3 sm:max-w-xs sm:w-full">
                         <p class="text-xl text-stone-100 font-bold m-0 p-0">
                             {{ $question->body }}
                         </p>
 
-                        <textarea name="{{ $question->short }}" class="px-4 py-2 text-lg text-secondaryOrange bg-stone-100 rounded-3xl" required>{{ old($question->id) ?? 'ukdkh' }}</textarea>
-                        <x-form.error name="{{ $question->short }}" />
+                        <textarea name="answer[{{ $loop->iteration - 1 }}]" class="px-4 py-2 text-lg text-secondaryOrange bg-stone-100 rounded-3xl" required>{{ old($loop->iteration - 1) ?? 'test' }}</textarea>
+                        <x-form.error name="answer[{{ $loop->iteration - 1 }}]" />
                     </div>
                 @endforeach
 
