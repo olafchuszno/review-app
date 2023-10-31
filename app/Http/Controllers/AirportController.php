@@ -17,20 +17,13 @@ class AirportController extends Controller
 
     public function show(Airport $airport)
     {
-        $other_airports = null;
-
-        // Check for other airports in the area
-        if ($airport->numAirports > 1) {
-            $other_airports = DB::table('airports')->
-            where('cityCode', $airport->cityCode)->whereNot('code', $airport->code)->get();
-        }
-
         return view('airport.show', [
             'airport' => $airport,
-            'other_airports' => $other_airports,
+            'other_airports' => $this->other_airports($airport),
             'other_airports_num' => $airport->numAirports - 1
         ]);
     }
+
 
     public function search_airports()
     {
@@ -42,5 +35,11 @@ class AirportController extends Controller
         ->orWhere('cityName', 'like', '%'.$input.'%')
         ->orWhere('countryName', 'like', '%'.$input.'%')
         ->get();
+    }
+
+    public function other_airports(Airport $airport)
+    {
+        return DB::table('airports')
+            ->where('cityCode', $airport->cityCode)->whereNot('code', $airport->code)->get();
     }
 }
