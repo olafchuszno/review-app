@@ -71,7 +71,7 @@ class ContributionController extends Controller
             ]);
         }
 
-        return redirect('/')->with('success', 'Contribution was published. Thank you for your input!');
+        return redirect("/airports/{$airport->code}/basic_info")->with('success', 'Contribution was published. Thank you for your input!');
     }
 
 }
