@@ -25,6 +25,8 @@ class AirportController extends Controller
     }
 
 
+    // methods
+
     public function search_airports()
     {
         $input = request('airport');

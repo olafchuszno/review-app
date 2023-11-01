@@ -26,8 +26,8 @@
                             {{ $question->body }}
                         </p>
 
-                        <textarea name="answer[{{ $loop->iteration - 1 }}]" class="px-4 py-2 text-lg text-secondaryOrange bg-stone-100 rounded-3xl" required>{{ old($loop->iteration - 1) ?? 'test' }}</textarea>
-                        <x-form.error name="answer[{{ $loop->iteration - 1 }}]" />
+                        <textarea name="answer[{{ $question->id }}]" class="px-4 py-2 text-lg text-secondaryOrange bg-stone-100 rounded-3xl" required>{{ old($loop->iteration - 1) ?? 'test' }}</textarea>
+                        <x-form.error name="answer[{{ $question->id }}]" />
                     </div>
                 @endforeach
 
