@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
 use App\Http\Controllers\ChooseCategoryController;
 use App\Http\Controllers\ContributionController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SessionController;
@@ -49,3 +50,5 @@ Route::get('/airports/{airport}/contribute', [ContributionController::class, 'ch
 Route::get('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'create'])->middleware('auth');
 
 Route::post('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'store'])->middleware('auth');
+
+Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
