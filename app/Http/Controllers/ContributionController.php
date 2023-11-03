@@ -7,6 +7,7 @@ use App\Models\Answer;
 use App\Models\Contribution;
 use App\Models\Topic;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 
 class ContributionController extends Controller
@@ -41,14 +42,16 @@ class ContributionController extends Controller
     public function store(Airport $airport, Topic $topic)
     {
         // Get id's of all topic's questions
-        $question_ids = $topic->questions->pluck('id');
+        $question_ids = $topic->questions->pluck('id')->all();
         
         // Validate the answers
         $answers = request()->validate([
             'answer.*' => ['required', 'min:1', 'max:500']
         ])['answer'];
 
-        if (count($answers) != count($question_ids)) {
+
+        // Check whether all questions were answered
+        if (array_keys($answers) != $question_ids) {
 
             throw ValidationException::withMessages(['failed' => 'All questions need to be answered']);
         }
@@ -62,12 +65,12 @@ class ContributionController extends Controller
         ]);
 
         // Create the Answers
-        for ($x = 0; $x < count($question_ids) ; $x++) {
+        foreach ($question_ids as $question_id) {
 
             Answer::factory()->create([
                 'contribution_id' => $contribution->id,
-                'question_id' => $question_ids[$x],
-                'body' => $answers[$x]
+                'question_id' => $question_id,
+                'body' => $answers[$question_id]
             ]);
         }
 
