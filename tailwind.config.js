@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primaryOrange': '#f97316',
-        'secondaryOrange' : '#ea580c',
+        'primaryOrange': '#ff6200',
+        'secondaryOrange' : '#ff8000',
 
-        'primaryIndigo' : '#4f46e5',
-        'secondaryIndigo' : '#312e81',
+        'primaryIndigo' : '#6f009e',
+        'secondaryIndigo' : '#470066',
         'softIndigo' : '#6366f1',
         'neutralIndigo' : '#c7d2fe',
 
