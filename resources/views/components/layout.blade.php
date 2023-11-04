@@ -13,7 +13,7 @@
 </head>
 <body class="bg-secondaryIndigo text-indigo-100">
 
-    <nav class="justify-between bg-primaryIndigo border-b-2 border-indigo-700">
+    <nav class="justify-between bg-primaryIndigo">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -54,9 +54,9 @@
                 <div class="flex space-x-4 items-center">
                     
                     <!-- Navbar Left links -->
-                    <a href="/" class="{{ request()->is('/') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">Airport Search</a>
-                    <a href="#" class="{{ request()->is('/journey_search') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">Journey Search</a>
-                    <a href="/about" class="{{ request()->is('/about') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">About</a>
+                    <a href="/" class="{{ request()->is('/') ? 'bg-secondaryIndigo' : 'hover:bg-secondaryIndigo' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">Airport Search</a>
+                    <a href="#" class="{{ request()->is('/journey_search') ? 'bg-secondaryIndigo' : 'hover:bg-secondaryIndigo' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">Journey Search</a>
+                    <a href="/about" class="{{ request()->is('/about') ? 'bg-secondaryIndigo' : 'hover:bg-secondaryIndigo' }} text-neutralIndigo rounded-full px-4 py-2 text-lg font-semibold">About</a>
                     
                 </div>
                 </div>
@@ -108,10 +108,10 @@
             @endauth
             @guest
                 <div class="mx-10">
-                    <a href="/register" class="{{ request()->is('register') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full pl-4 pr-3 py-2 text-xl font-bold">
+                    <a href="/register" class="{{ request()->is('register') ? 'bg-secondaryIndigo' : 'hover:bg-secondaryIndigo' }} text-neutralIndigo rounded-full pl-4 pr-3 py-2 text-xl font-bold">
                         Register
                     </a>
-                    <a href="/login" class="{{ request()->is('login') ? 'bg-indigo-500' : 'hover:bg-indigo-500' }} text-neutralIndigo rounded-full px-4 py-2 text-xl font-bold ml-2">
+                    <a href="/login" class="{{ request()->is('login') ? 'bg-secondaryIndigo' : 'hover:bg-secondaryIndigo' }} text-neutralIndigo rounded-full px-4 py-2 text-xl font-bold ml-2">
                         Log in
                     </a>
                 </div>
