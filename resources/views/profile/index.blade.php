@@ -69,7 +69,7 @@
                         </tr>
                         <tr class="flex justify-evenly py-1 mt-6 mb-2">
                             <td>
-                                <a href="/profile/edit" class="bg-secondaryIndigo text-primaryOrange text-lg font-bold px-5 py-2 rounded-xl hover:bg-secondaryIndigo hover:border hover:border-primaryOrange">
+                                <a href="/profile/edit" class="bg-secondaryIndigo border font-medium hover:bg-secondaryIndigo hover:border hover:border-primaryOrange px-5 py-2 rounded-xl text-lg">
                                     Edit your profile
                                 </a>
                             </td>
