@@ -8,10 +8,10 @@
                 Results for:  "{{ request('airport') }}"
             </h1>
         </div>
-        <div class="flex justify-center mt-10">
+        <div class="flex justify-center mt-10 rounded-xl flex-auto">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
-                <div class="py-2 align-middle min-w-full sm:px-6 lg:px-8">
-                    <div class="shadow overflow-hidden sm:rounded-lg">
+                <div class="align-middle min-w-full p-2">
+                    <div class="shadow overflow-hidden rounded-2xl">
                         <table class="min-w-full divide-y border-4 border-primaryIndigo" width="820px">
                             <thead>
                                 <tr class="border-primaryIndigo text-lg font-bold border-4">
