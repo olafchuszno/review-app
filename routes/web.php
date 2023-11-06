@@ -52,3 +52,5 @@ Route::get('/airports/{airport}/contribute/{topic}', [ContributionController::cl
 Route::post('/airports/{airport}/contribute/{topic}', [ContributionController::class, 'store'])->middleware('auth');
 
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
+
+Route::get('/profile/edit', [ProfileController::class, 'create'])->middleware('auth');
