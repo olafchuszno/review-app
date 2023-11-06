@@ -11,7 +11,7 @@
     <title>Homepage</title>
 
 </head>
-<body class="bg-secondaryIndigo text-indigo-100">
+<body class="bg-secondaryIndigo text-stone-200">
 
     <nav class="justify-between bg-primaryIndigo">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">

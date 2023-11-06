@@ -12,7 +12,7 @@ export default {
         'secondaryOrange' : '#ff8000',
 
         'primaryIndigo' : '#6f009e',
-        'secondaryIndigo' : '#470066',
+        'secondaryIndigo' : '#3d0057',
         'softIndigo' : '#6366f1',
         'neutralIndigo' : '#c7d2fe',
 

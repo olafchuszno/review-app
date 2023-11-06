@@ -11,20 +11,20 @@
         <div class="flex justify-center mt-10">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
                 <div class="py-2 align-middle min-w-full sm:px-6 lg:px-8">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                        <table class="min-w-full divide-y border-4 divide-neutralStone" width="820px">
+                    <div class="shadow overflow-hidden sm:rounded-lg">
+                        <table class="min-w-full divide-y border-4 border-primaryIndigo" width="820px">
                             <thead>
-                                <tr class="border-neutralStone text-lg font-bold border-4">
-                                    <th class="pl-4 py-4 whitespace-nowrap">Airport Code</th>
-                                    <th class="py-2">Airport Name</th>
-                                    <th class="py-2">Airport City</th>
-                                    <th class="py-2 pr-4">Airport Country</th>
+                                <tr class="border-primaryIndigo text-lg font-bold border-4">
+                                    <th class="pl-4 py-6 whitespace-nowrap">Airport Code</th>
+                                    <th class="py-6">Airport Name</th>
+                                    <th class="py-6">Airport City</th>
+                                    <th class="py-6 pr-4">Airport Country</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 
                                 @foreach ($airports as $airport)
-                                <tr class="border-neutralStone text-lg font-semibold border-4">
+                                <tr class="border-primaryIndigo text-lg font-semibold border-4">
                                     <td class="py-4 ml-2 whitespace-nowrap">
                                         <div class="flex justify-center">
                                             {{ $airport->code }}
