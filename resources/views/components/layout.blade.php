@@ -134,6 +134,15 @@
     
     {{ $slot }}
     
+    @if (session()->has('success'))
+        <div class="fixed bottom-3 right-3 bg-primaryOrange p-3 text-md font-bold rounded-2xl">
+            {{ session('success') }}
+        </div>
+    @elseif (session()->has('failure'))
+        <div class="fixed bottom-3 right-3 bg-red-500 p-3 text-md font-bold rounded-2xl">
+            {{ session('failure') }}
+        </div>
+    @endif
 
 </body>
 </html>
