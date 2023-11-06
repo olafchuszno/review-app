@@ -31,7 +31,7 @@
             <div class="flex flex-col w-2/3 items-center pb-8 bg-primaryIndigo rounded-2xl ml-6">
 
                 <div class="flex flex-col items-center gap-3 mt-4 px-4 pt-4 pb-3 border-b border-secondaryIndigo">
-                    <a href="change-avatar">
+                    <a href="/profile/edit">
                         <img src="{{ asset('storage/' . auth()->user()->avatar) }}" 
                             alt="user's avatar picture"
                             width="100px"
@@ -39,10 +39,9 @@
                         />
                     </a>
                     <div class="flex gap-1 justify-center items-center">
-                        <a href="change-avatar" class="font-semibold hover:text-primaryOrange">
-                            Change avatar
-                        </a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#ff6200" d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+                        <p class="font-semibold hover:text-primaryOrange">
+                            Your Avatar
+                        </p>
                     </div>
                 </div>
                 
@@ -53,20 +52,25 @@
                                 Username
                             </td>
                             <td class="p-2 text-lg font-semibold text-center">
-                                <a href="change-username" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
+                                <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
                                     {{ auth()->user()->username }}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#ff6200" d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
                                 </a>
                             </td>
                         </tr>
-                        <tr class="flex justify-evenly py-1">
+                        <tr class="flex justify-evenly py-1 border-b border-secondaryIndigo">
                             <td class="p-2 text-lg font-semibold text-center">
                                 Email
                             </td>
                             <td class="p-2 text-lg font-semibold text-center">
-                                <a href="change-email" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
+                                <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
                                     {{ auth()->user()->email }}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#ff6200" d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="flex justify-evenly py-1 mt-6 mb-2">
+                            <td>
+                                <a href="/profile/edit" class="bg-secondaryIndigo text-primaryOrange text-lg font-bold px-5 py-2 rounded-xl hover:bg-secondaryIndigo hover:border hover:border-primaryOrange">
+                                    Edit your profile
                                 </a>
                             </td>
                         </tr>
