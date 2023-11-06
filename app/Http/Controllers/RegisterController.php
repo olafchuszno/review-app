@@ -20,7 +20,7 @@ class RegisterController extends Controller
             'first_name' => ['required', 'max:255'],
             'last_name' => ['required', 'max:255'],
             'email' => ['required', 'max:255', 'email', 'unique:users,email'],
-            'username' => ['required', 'min:4', 'max:255', 'unique:users,username'],
+            'username' => ['required', 'min:4', 'max:255', 'alpha_num:ascii', 'unique:users,username'],
             'password' => ['required', 'min:7', 'max:255'],
             'avatar' => 'image'
         ]);
