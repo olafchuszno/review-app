@@ -6,7 +6,7 @@
 
         @foreach ($contributions as $contribution)
 
-            <div class="p-5 border rounded-2xl border-slate-300 bg-indigo-300 flex flex-col items-center mb-10">
+            <div class="p-5 border rounded-2xl border-neutralStone bg-indigo-300 flex flex-col items-center mb-10">
 
                 @if (request('page') == 1 && $loop->first)
                     <p class="py-3 text-2xl text-stone-200 w-2/5 bg-secondaryOrange font-bold rounded-full text-center my-5">
