@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
-use App\Http\Controllers\ChooseCategoryController;
 use App\Http\Controllers\ContributionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
@@ -54,5 +54,6 @@ Route::post('/airports/{airport}/contribute/{topic}', [ContributionController::c
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->middleware('auth');
-
 Route::patch('/profile/edit', [ProfileController::class, 'update'])->middleware('auth');
+
+Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
