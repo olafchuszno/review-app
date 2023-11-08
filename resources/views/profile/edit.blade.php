@@ -11,14 +11,14 @@
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <form action="/profile/edit" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4">
                 @csrf
-                @method('update')
+                @method('patch')
 
                 <div class="flex gap-6 justify-between">
-                    <x-form.input-field value="{{ $first_name }}" name="first_name" required>
+                    <x-form.input-field name="first_name" required value="{{ old('first_name') ?? $user->first_name }}" placeholder="{{ $user->first_name }}">
                         First name
                     </x-input-field>
 
-                    <x-form.input-field value="{{ $last_name }}" name="last_name" required>
+                    <x-form.input-field name="last_name" required value="{{ old('last_name') ?? $user->last_name }}" placeholder="{{ $user->last_name }}" >
                         Surname
                     </x-input-field>
                 </div>
@@ -29,12 +29,12 @@
                     </div>
                 @endif
                 
-                <x-form.input-field name="avatar" type="file" input="{{ $avatar }}" input_class="text-stone-700" div_class="mt-0.5">
+                <x-form.input-field name="avatar" type="file" input_class="text-stone-700" div_class="mt-0.5">
                     Avatar (leave empty if you wish to keep your old one)
                 </x-input-field>
                 <x-form.error name="avatar" />
 
-                <x-form.input-field value="{{ $username }}" name="username" required>
+                <x-form.input-field name="username" required value="{{ old('username') ?? $user->username }}" placeholder="{{ $user->username }}">
                     Username
                 </x-input-field>
                 <x-form.error name="username" />
@@ -46,7 +46,9 @@
                 <x-form.error name="password" />
 
                 <div class="mt-2">
-                    <button type="submit" class="flex w-full justify-center rounded-xl bg-primaryOrange px-3 py-1.5 text-md font-extrabold leading-6 text-stone-100 shadow-sm hover:text-indigo-500 hover:bg-stone-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update profile!</button>
+                    <button type="submit" class="flex w-full justify-center rounded-xl bg-primaryOrange px-3 py-1.5 text-md font-extrabold leading-6 text-stone-100 shadow-sm hover:text-indigo-500 hover:bg-stone-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        Update profile!
+                    </button>
                 </div>
             </form>
 
