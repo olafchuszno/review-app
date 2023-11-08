@@ -10,33 +10,14 @@
     <div class="mt-4 flex justify-center">
         <span class="flex justify-center mt-10 w-1/2">
             <div class="w-1/5 rounded-3xl">
-                <ul role="list" class="w-full flex flex-col gap-4">
-                    <x-profile.li href="profile">
-                        Profile
-                    </x-profile.li>
-
-                    <x-profile.li href="account">
-                        Account
-                    </x-profile.li>
-
-                    <x-profile.li href="posts">
-                        Posts
-                    </x-profile.li>
-
-                    <x-profile.li href="contributions">
-                        Contributions
-                    </x-profile.li>
-                </ul>
+                <x-profile.menu />
             </div>
+
             <div class="flex flex-col w-2/3 items-center pb-8 bg-primaryIndigo rounded-2xl ml-6">
 
                 <div class="flex flex-col items-center gap-3 mt-4 px-4 pt-4 pb-3 border-b border-secondaryIndigo">
                     <a href="/profile/edit">
-                        <img src="{{ asset('storage/' . auth()->user()->avatar) }}" 
-                            alt="user's avatar picture"
-                            width="100px"
-                            class="rounded-full p-0.5 hover:border-2 hover:border-primaryOrange"
-                        />
+                        <x-user-avatar />
                     </a>
                     <div class="flex gap-1 justify-center items-center">
                         <p class="font-semibold hover:text-primaryOrange">
@@ -49,21 +30,33 @@
                     <table class="">
                         <tr class="flex justify-evenly py-1 border-b border-secondaryIndigo">
                             <td class="p-2 text-lg font-semibold text-center">
-                                Username
+                                First name
                             </td>
                             <td class="p-2 text-lg font-semibold text-center">
                                 <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
-                                    {{ auth()->user()->username }}
+                                    {{ auth()->user()->first_name }}
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="flex justify-between py-1 border-b border-secondaryIndigo">
+                            <td class="py-2 w-1/2 text-lg font-semibold text-center flex items-center justify-center">
+                                <p>
+                                    Last name
+                                </p>
+                            </td>
+                            <td class="py-2 w-1/2 text-lg font-semibold text-center flex items-center justify-center">
+                                <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
+                                    {{ auth()->user()->last_name }}
                                 </a>
                             </td>
                         </tr>
                         <tr class="flex justify-evenly py-1 border-b border-secondaryIndigo">
                             <td class="p-2 text-lg font-semibold text-center">
-                                Email
+                                Username
                             </td>
                             <td class="p-2 text-lg font-semibold text-center">
                                 <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
-                                    {{ auth()->user()->email }}
+                                    {{ auth()->user()->username }}
                                 </a>
                             </td>
                         </tr>
