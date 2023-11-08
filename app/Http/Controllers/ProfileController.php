@@ -16,10 +16,7 @@ class ProfileController extends Controller
     public function edit()
     {
         return view('profile.edit', [
-            'first_name' => auth()->user()->first_name,
-            'last_name' => auth()->user()->last_name,
-            'avatar' => auth()->user()->avatar,
-            'username' => auth()->user()->username
+            'user' => User::find(auth()->user()->id)
         ]);
     }
 
