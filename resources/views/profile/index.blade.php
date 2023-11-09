@@ -3,7 +3,7 @@
 
     <div class="text-center text-secondaryOrange text-4xl font-bold leading-7 ml-2">
         <h1>
-            Your profile information
+            Profile details
         </h1>
     </div>
 
