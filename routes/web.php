@@ -57,3 +57,4 @@ Route::get('/profile/edit', [ProfileController::class, 'edit'])->middleware('aut
 Route::patch('/profile/edit', [ProfileController::class, 'update'])->middleware('auth');
 
 Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
+Route::get('/account/change_password', [AccountController::class, 'edit'])->middleware('auth');
