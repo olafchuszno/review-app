@@ -9,7 +9,7 @@
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form action="/profile/edit" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4">
+            <form action="/profile/edit" method="POST" class="flex flex-col gap-4">
                 @csrf
                 @method('patch')
 
