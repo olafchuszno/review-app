@@ -1,5 +1,5 @@
 @if ($errors->get($name))
-    <p class="text-lg font-bold text-secondaryOrange text-center">
-        {{ $errors->get($name)[0] }}
+    <p class="bg-stone-300 border-2 border-red-500 font-bold px-2 py-1.5 rounded-2xl text-center text-md text-red-500">
+        {{ $errors->first($name) }}
     </p>
 @endif
