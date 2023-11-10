@@ -41,7 +41,7 @@ class RegisterController extends Controller
         auth()->login($user);
 
         // Redirect to the homepage
-        return redirect('/');
+        return redirect('/')->with('success', 'We created your account');
 
     }
 }
