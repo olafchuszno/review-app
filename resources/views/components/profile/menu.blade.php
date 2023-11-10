@@ -7,11 +7,11 @@
         Account
     </x-profile.li>
 
-    <x-profile.li href="posts">
+    <x-profile.li href="my/posts">
         Posts
     </x-profile.li>
 
-    <x-profile.li href="contributions">
+    <x-profile.li href="my/contributions">
         Contributions
     </x-profile.li>
 </ul>
