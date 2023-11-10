@@ -7,14 +7,16 @@
             </h1>
         </div>
 
-        <div class="bg-primaryIndigo py-14 px-20 mt-10 mb-10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-4xl">
+        <div class="bg-primaryIndigo text-center py-14 px-20 mt-10 mb-10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-4xl">
 
             @if ($errors->any())
-                @foreach ($errors->all() as $error)
-                    <p class="text-2xl font-bold bg-secondaryOrange text-stone-100 px-6 py-2 mb-6 rounded-2xl">
-                        {{ $error }}
-                    </p>
-                @endforeach
+                <div class="flex justify-center">
+                    @foreach ($errors->all() as $error)
+                        <p class="text-2xl font-bold w-2/3 bg-primaryOrange text-center text-stone-100 px-6 py-2 mb-6 rounded-2xl">
+                            {{ $error }}
+                        </p>
+                    @endforeach
+                </div>  
             @endif
 
             <form action="/airports/{{ $airport->code }}/contribute/{{ $topic->name }}" method="POST" class="flex flex-wrap justify-evenly items-end gap-8">
