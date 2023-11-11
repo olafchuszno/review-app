@@ -1,13 +1,6 @@
 @props(['airports'])
 <x-layout>
-    <main>
-        <div class="text-center mt-16">
-            <x-style.logo />
-
-            <h1 class="text-4xl font-bold text-primaryOrange">
-                Results for:  "{{ request('airport') }}"
-            </h1>
-        </div>
+    <x-main-logo heading="Results for:  \'{{ request('airport')\' }}" :airports="$airports">
         <div class="flex justify-center mt-10 rounded-xl flex-auto">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
                 <div class="align-middle min-w-full p-2">
@@ -56,6 +49,5 @@
                 </div>
             </div>
         </div>
-
-    </main>
+    </x-main-logo>
 </x-layout>
