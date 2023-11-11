@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AirportController;
 use App\Http\Controllers\ContributionController;
+use App\Http\Controllers\MyContributionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
@@ -59,3 +60,5 @@ Route::patch('/profile/edit', [ProfileController::class, 'update'])->middleware(
 Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
 Route::get('/account/change_password', [AccountController::class, 'edit'])->middleware('auth');
 Route::patch('account/change_password', [AccountController::class, 'update'])->middleware('auth');
+
+Route::get('/my/contributions', [MyContributionController::class, 'index'])->middleware('auth');
