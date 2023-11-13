@@ -5,7 +5,7 @@
             <form action="/login" method="POST" class="flex flex-col gap-4">
                 @csrf
 
-                <x-form.input-field name="email_or_username" type="text" required>
+                <x-form.input-field name="email_or_username" value="{{ old('email_or_username') ?? '' }}" type="text" required>
                     Email or Username
                 </x-input-field>
                 <x-form.error name="email_or_username" />
