@@ -1,13 +1,7 @@
 <x-layout>
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="">
-            <x-style.logo />
+    <x-main-logo heading="Log in to your account" />
 
-
-            <h1 class="text-center text-primaryOrange text-3xl font-bold leading-9 tracking-tight">Log in to your account</h1>
-        </div>
-
-        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
+        <section class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
             <form action="/login" method="POST" class="flex flex-col gap-4">
                 @csrf
 
@@ -28,7 +22,6 @@
                     </button>
                 </div>
             </form>
-
-        </div>
+        </section>
     </div>
 </x-layout>

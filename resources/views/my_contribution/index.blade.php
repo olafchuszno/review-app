@@ -1,14 +1,8 @@
 <x-layout>
 
-<x-main-logo>
+<x-main-logo heading="Your contributions!">
 
-    <div class="flex flex-col items-center">
-
-        <div>
-            <h1 class="">
-                Your contributions!
-            </h1>
-        </div>
+    <section class="flex flex-col items-center">
 
         <div>
         @if ($contributions->hasPages())
@@ -79,7 +73,7 @@
             {{ $contributions->links() }}
         </div>
 
-    </div>
+    </section>
     
 </x-main-airport>
 

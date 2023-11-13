@@ -1,11 +1,5 @@
 <x-layout>
-    <x-main-logo>
-
-    <div class="text-center text-secondaryOrange text-4xl font-bold leading-7 ml-2">
-        <h1>
-            Profile details
-        </h1>
-    </div>
+    <x-main-logo heading="Profile details">
 
     <div class="mt-4 flex justify-center">
         <span class="flex justify-center mt-10 w-1/2">
