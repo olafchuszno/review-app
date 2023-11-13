@@ -2,7 +2,7 @@
     <x-main-airport :airport="$airport" class="flex flex-col items-center">
 
         <div>
-            <h1 class="text-primaryIndigo text-2xl font-bold px-4 py-2 rounded-2xl bg-neutralIndigo">
+            <h1 class="text-primaryIndigo text-2xl font-bold px-4 py-2 rounded-2xl bg-neutralStone">
                 Here you can share your information about {{ $topic->name }}
             </h1>
         </div>
