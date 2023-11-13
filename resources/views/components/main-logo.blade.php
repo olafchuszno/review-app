@@ -2,7 +2,7 @@
 <main class="mt-1 {{ $class }}">
     <section>
 
-        <div>
+        <div class="-mb-2">
             <x-style.logo />
         </div>
 

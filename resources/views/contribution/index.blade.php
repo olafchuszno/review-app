@@ -2,7 +2,7 @@
 
 <x-main-airport :airport="$airport" :topic="$topic">
 
-    <div class="flex flex-col w-2/3 items-center mt-8">
+    <section class="flex flex-col w-2/3 items-center">
 
         @foreach ($contributions as $contribution)
 
@@ -35,7 +35,7 @@
 
         @endforeach
         
-    </div>
+    </section>
 
     {{ $contributions->links() }}
     
