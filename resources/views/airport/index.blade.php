@@ -1,6 +1,6 @@
 @props(['airports'])
 <x-layout>
-    <x-main-logo heading="Results for:  \'{{ request('airport')\' }}" :airports="$airports">
+    <x-main-logo heading="Results for: '{{ request('airport') }}'" :airports="$airports">
         <div class="flex justify-center mt-10 rounded-xl flex-auto">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 max-w-max">
                 <div class="align-middle min-w-full p-2">
