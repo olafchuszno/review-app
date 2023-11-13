@@ -49,8 +49,10 @@ class SessionController extends Controller
             die();
         }
 
+        $name = ucwords(auth()->user()->first_name);
+
         // Authentication succeeded, log the user in
-        return redirect('/');
+        return redirect('/')->with('success', "Welcome back, {$name}.");
     }
 
     public function destroy()
@@ -61,6 +63,6 @@ class SessionController extends Controller
 
         request()->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')->with('success', "You've been logged out");
     }
 }
