@@ -1,14 +1,7 @@
 <x-layout>
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="">
-            <x-style.logo />
-
-            <h1 class="text-center text-primaryOrange text-3xl font-bold leading-9 tracking-tight">
-                Change password
-            </h1>
-        </div>
-
-        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <x-main-logo class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <section class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            
             <form action="/account/change_password" method="POST" class="flex flex-col gap-4">
                 @csrf
                 @method('patch')
@@ -54,8 +47,6 @@
 
             </form>
 
-            
-
-        </div>
-    </div>
+        </section>
+    </x-main-logo>
 </x-layout>

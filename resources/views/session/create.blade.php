@@ -1,5 +1,5 @@
 <x-layout>
-    <x-main-logo heading="Log in to your account" />
+    <x-main-logo heading="Log in to your account">
 
         <section class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
             <form action="/login" method="POST" class="flex flex-col gap-4">
@@ -23,5 +23,5 @@
                 </div>
             </form>
         </section>
-    </div>
+    </x-main-logo>
 </x-layout>

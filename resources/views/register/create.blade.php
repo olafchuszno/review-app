@@ -1,12 +1,7 @@
 <x-layout>
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="">
-            <x-style.logo />
+    <x-main-logo heading="Create an New account" class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
 
-            <h1 class="text-center text-primaryOrange text-3xl font-bold leading-9 tracking-tight">Create an New account</h1>
-        </div>
-
-        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <section class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <form action="/register" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4">
                 @csrf
 
@@ -52,6 +47,6 @@
                 </div>
             </form>
 
-        </div>
-    </div>
+        </section>
+    </x-main-logo>
 </x-layout>
