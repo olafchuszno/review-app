@@ -10,12 +10,10 @@ use Illuminate\Support\Facades\DB;
 class MyContributionController extends Controller
 {
     public function index()
-    {
-        $user = User::find(auth()->user()->id);
-        
+    {        
         // Display all user's contributions, paginated to 6 results per page.
         return view('my_contribution.index', [
-            'contributions' => User::find(auth()->user()->id)->contributions->paginate(3)
+            'contributions' => User::find(auth()->user()->id)->contributions->paginate(8)
         ]);
     }
 }
