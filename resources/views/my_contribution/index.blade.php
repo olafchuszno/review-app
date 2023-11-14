@@ -5,10 +5,10 @@
 
             <x-navigation.buttons :contributions="$contributions" />
 
-            <x-contribution.grid :contributions="$contributions" />
+            <x-contribution.short-grid :contributions="$contributions" />
 
 
-            <div class="flex items-center">
+            <div class="flex items-center mt-10">
                 {{ $contributions->links() }}
             </div>
 
