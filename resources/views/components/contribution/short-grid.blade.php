@@ -8,18 +8,18 @@
 
             <table class="text-primaryIndigo mt-2">
                 
-                <x-basic-info class="grid grid-cols-2">
-                    <x-td-first class="col-span-1">
+                <tr class="lg:grid gap-6 lg:grid-cols-3 font-semibold p-4">
+                    <td class="col-span-1 text-lg text-center">
                         <a href="contributions/{{ $contribution->id }}">
                             {{ $contribution->answers->first()->question->body }}
                         </a>
-                    </x-td-first>
-                    <x-td-second class="col-span-1">
-                        <a href="{{ $contribution->id }}">
+                    </td>
+                    <td class="col-span-2 text-md">
+                        <a href="contributions/{{ $contribution->id }}">
                             {{ $contribution->answers->first()->body }}
                         </a>
-                    </x-td-second>
-                </x-basic-info>
+                    </td>
+                </tr>
                 
             </table>
 
