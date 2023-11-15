@@ -13,7 +13,7 @@
 </head>
 <body class="bg-secondaryIndigo text-stone-200">
 
-    <nav class="justify-between bg-primaryIndigo">
+    <nav class="justify-between bg-primaryIndigo fixed top-0 left-0 right-0">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -54,9 +54,9 @@
                 <div class="flex space-x-4 items-center">
                     
                     <!-- Navbar Left links -->
-                    <a href="/" class="{{ request()->is('/') ? 'bg-secondaryIndigo border border-primaryOrange' : 'hover:bg-secondaryIndigo' }} rounded-full px-4 py-2 text-lg font-semibold">Airport Search</a>
-                    <a href="#" class="{{ request()->is('journey_search') ? 'bg-secondaryIndigo border border-primaryOrange' : 'hover:bg-secondaryIndigo' }} rounded-full px-4 py-2 text-lg font-semibold">Journey Search</a>
-                    <a href="/about" class="{{ request()->is('about') ? 'bg-secondaryIndigo border border-primaryOrange' : 'hover:bg-secondaryIndigo' }} rounded-full px-4 py-2 text-lg font-semibold">About</a>
+                    <a href="/" class="{{ request()->is('/') ? 'bg-secondaryIndigo ' : 'hover:bg-secondaryIndigo' }} active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone transition rounded-full px-4 py-2 text-lg font-semibold">Airport Search</a>
+                    <a href="#" class="{{ request()->is('journey_search') ? 'bg-secondaryIndigo ' : 'hover:bg-secondaryIndigo' }} active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone transition rounded-full px-4 py-2 text-lg font-semibold">Journey Search</a>
+                    <a href="/about" class="{{ request()->is('about') ? 'bg-secondaryIndigo ' : 'hover:bg-secondaryIndigo' }} active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone transition rounded-full px-4 py-2 text-lg font-semibold">About</a>
                     
                 </div>
                 </div>
