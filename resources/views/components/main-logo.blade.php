@@ -1,5 +1,5 @@
 @props(['class' => '', 'heading'])
-<main class="mt-1 {{ $class }}">
+<main class="mt-20 {{ $class }}">
     <section>
 
         <div class="-mb-2">
