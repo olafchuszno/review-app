@@ -62,3 +62,4 @@ Route::get('/account/change_password', [AccountController::class, 'edit'])->midd
 Route::patch('account/change_password', [AccountController::class, 'update'])->middleware('auth');
 
 Route::get('/my/contributions', [MyContributionController::class, 'index'])->middleware('auth');
+ROute::get('/my/contributions/{contribution:id}', [MyContributionController::class, 'show'])->middleware('auth');
