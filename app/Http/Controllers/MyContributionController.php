@@ -31,4 +31,14 @@ class MyContributionController extends Controller
             'contribution' => $contribution->with('answers')->get()->first()
         ]);
     }
+
+    public function update(Contribution $contribution)
+    {
+        dd('MyContribution.edit');
+    }
+
+    public function destroy(Contribution $contribution)
+    {
+        dd('MyContribution.destroy');
+    }
 }
