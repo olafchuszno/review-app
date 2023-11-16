@@ -4,7 +4,7 @@
         @if ($contributions->count())
             <section class="flex flex-col items-center mt-8">
 
-                <x-navigation.buttons :contributions="$contributions" />
+                <x-navigation.buttons :object="$contributions" />
 
                 <x-contribution.short-grid :contributions="$contributions" />
 
