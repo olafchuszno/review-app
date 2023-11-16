@@ -32,9 +32,19 @@ class MyContributionController extends Controller
         ]);
     }
 
-    public function edit()
+    public function edit(Contribution $contribution)
     {
-        dd('MyContribution.edit');
+        // Check for authorization of ownership of the contribution
+        if (auth()->user()->id != $contribution->author->id) {
+
+            // User is not the author, throw an exception
+            return throw new AuthorizationException('This action is forbidden', 403);
+        }
+
+        // User authorized, return the view
+        return view('my_contribution.edit', [
+            'contribution' => $contribution
+        ]);
     }
 
     public function update(Contribution $contribution)
