@@ -1,5 +1,5 @@
 <x-layout>
-    <x-main-logo class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <x-main-logo heading="Update your password" class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <section class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             
             <form action="/account/change_password" method="POST" class="flex flex-col gap-4">
@@ -26,7 +26,7 @@
 
                 <div class="mt-2">
                     <button type="submit" class="flex w-full justify-center rounded-xl bg-primaryOrange px-3 py-1.5 text-md font-extrabold leading-6 text-stone-100 shadow-sm hover:text-indigo-500 hover:bg-stone-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Update profile!
+                        Update password!
                     </button>
                 </div>
 
@@ -40,7 +40,7 @@
                             @endforeach
                         </span>
                         <h2 class="text-red-500">
-                            There were some problems...
+                            There were some issues...
                         </h2>
                     </div>
                 @endif
