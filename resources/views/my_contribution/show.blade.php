@@ -9,6 +9,18 @@
                 <x-section-link href="/airports/{{$contribution->airport->code}}/topics/{{$contribution->topic->name}}" requestIs="none">
                     {{ $contribution->topic->name }}
                 </x-section-link>
+                <x-section-link href="/my/contributions/{{$contribution->id}}/edit" class="text-primaryOrange">
+                    Edit
+                </x-section-link>
+                <x-section-link class="text-primaryOrange">
+                    <form method="POST" action="/my/contributions/{{$contribution->id}}">
+                        @csrf
+                        @method('DELETE')
+                        <button>
+                            Delete
+                        </button>
+                    </form>
+                </x-section-link>
             </div>
         </section>
 
