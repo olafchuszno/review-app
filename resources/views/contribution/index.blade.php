@@ -4,6 +4,10 @@
 
     <section class="flex flex-col w-2/3 items-center">
 
+    <div class="mb-4">
+        <x-navigation.buttons :object="$contributions"/>
+    </div>
+
         @foreach ($contributions as $contribution)
 
             <div class="p-5 border rounded-2xl border-neutralStone bg-indigo-300 flex flex-col items-center mb-10">
