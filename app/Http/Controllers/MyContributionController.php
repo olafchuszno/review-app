@@ -34,7 +34,7 @@ class MyContributionController extends Controller
 
     public function edit()
     {
-        dd('MyContribution.edit')
+        dd('MyContribution.edit');
     }
 
     public function update(Contribution $contribution)
