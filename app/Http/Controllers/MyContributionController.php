@@ -32,9 +32,14 @@ class MyContributionController extends Controller
         ]);
     }
 
+    public function edit()
+    {
+        dd('MyContribution.edit')
+    }
+
     public function update(Contribution $contribution)
     {
-        dd('MyContribution.edit');
+        dd('MyContribution.update');
     }
 
     public function destroy(Contribution $contribution)
