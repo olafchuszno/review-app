@@ -64,4 +64,5 @@ Route::patch('account/change_password', [AccountController::class, 'update'])->m
 Route::get('/my/contributions', [MyContributionController::class, 'index'])->middleware('auth');
 Route::get('/my/contributions/{contribution:id}', [MyContributionController::class, 'show'])->middleware('auth');
 Route::get('/my/contributions/{contribution:id}/edit', [MyContributionController::class, 'edit'])->middleware('auth');
+Route::patch('/my/contributions/{contribution:id}/edit', [MyContributionController::class, 'update'])->middleware('auth');
 Route::delete('/my/contributions/{contribution:id}', [MyContributionController::class, 'destroy'])->middleware('auth');
