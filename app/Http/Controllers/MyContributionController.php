@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Contribution;
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Auth\AuthenticationException;
 
 class MyContributionController extends Controller
 {
@@ -43,17 +45,42 @@ class MyContributionController extends Controller
 
         // User authorized, return the view
         return view('my_contribution.edit', [
-            'contribution' => $contribution
+            'contribution' => $contribution,
+            'questions' => $contribution->topic->questions,
+            'answers' => $contribution->answers
         ]);
     }
 
     public function update(Contribution $contribution)
     {
-        dd('MyContribution.update');
+        // Get id's of all topic's questions
+        $question_ids = $contribution->topic->questions->pluck('id')->all();
+
+        // Validate the answers
+        $answers = request()->validate([
+            'answer.*' => ['required', 'min:1', 'max:500']
+        ])['answer'];
+
+        // Check whether all questions were answered
+        if (array_keys($answers) != $question_ids) {
+
+            throw ValidationException::withMessages(['failed' => 'All questions need to be answered']);
+        }
+
+
+        // TODO update answers
     }
 
     public function destroy(Contribution $contribution)
     {
-        dd('MyContribution.destroy');
+        if ($contribution->author->id == auth()->user()->id) {
+
+            $contribution->delete();
+
+            return redirect('/my/contributions')->with('success', 'Your contribution was deleted');
+        }
+
+        return throw new AuthorizationException('This action is forbidden', 403);
+    
     }
 }
