@@ -58,7 +58,7 @@ class ContributionController extends Controller
 
         // Create the Contribution
         $contribution = Contribution::factory()->create([
-            'user_id' => auth()->id(),
+            'user_id' => auth()->user()->id,
             'airport_id' => $airport->id,
             'topic_id' => $topic->id,
             'variant' => 'regular'
