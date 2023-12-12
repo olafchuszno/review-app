@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             'first_name' => 'olaf',
             'last_name' => 'olaf',
             'email' => 'olaf@email.com',
+            'password' => 'password'
         ]);
 
         // Create 10 Posts
