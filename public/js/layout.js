@@ -1,8 +1,26 @@
-const dropdownMenuButton = document.querySelector('#dropdown-menu-button');
-const menuDropdown = document.querySelector('#menu-dropdown');
+const dropdownMenuButton = document.querySelector("#dropdown-menu-button");
+const menuDropdown = document.querySelector("#menu-dropdown");
+const trigger = document.querySelector("#trigger");
 
-
-dropdownMenuButton.addEventListener('click', function () {
-
-    menuDropdown.classList.toggle('hidden');
+// On a click of the menu
+dropdownMenuButton.addEventListener("click", function () {
+    // Display a menu and change it's state
+    changeDropdownMenuState();
+    // Add an event for an outside click
+    window.addEventListener("click", onClickAway);
 });
+
+function changeDropdownMenuState() {
+    // Toggle visibility of the dropdown menu
+    menuDropdown.classList.toggle("hidden");
+}
+
+const onClickAway = (e) => {
+    // If dropdown menu is not the target
+    if (e.target != trigger && e.target != menuDropdown) {
+        // Change the menu's state
+        changeDropdownMenuState();
+        // Remove the 'away click' listener
+        window.removeEventListener("click", onClickAway);
+    }
+};
