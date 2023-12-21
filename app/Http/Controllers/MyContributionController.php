@@ -65,8 +65,18 @@ class MyContributionController extends Controller
             throw ValidationException::withMessages(['failed' => 'All questions need to be answered']);
         }
 
+        // Get old answers from the database
+        $old_answers = $contribution->answers;
+
+        // Update the answers
+        foreach ($answers as $key => $answer) {
+            $old_answers[$key - 1]->update(['body' => $answer]);
+        }
+
+        return redirect("/my/contributions/{$contribution->id}")->with('success', 'Contribution was updated');
 
         // TODO update answers
+        return view('page_under_construction');
     }
 
     public function destroy(Contribution $contribution)
