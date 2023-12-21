@@ -4,7 +4,7 @@ const trigger = document.querySelector("#trigger");
 
 // On a click of the menu
 dropdownMenuButton.addEventListener("click", function () {
-    // Display a menu and change it's state
+    // Change menu's state (Display the menu)
     changeDropdownMenuState();
     // Add an event for an outside click
     window.addEventListener("click", onClickAway);
@@ -17,7 +17,7 @@ function changeDropdownMenuState() {
 
 const onClickAway = (e) => {
     // If dropdown menu is not the target
-    if (e.target != trigger && e.target != menuDropdown) {
+    if (e.target != trigger) {
         // Change the menu's state
         changeDropdownMenuState();
         // Remove the 'away click' listener

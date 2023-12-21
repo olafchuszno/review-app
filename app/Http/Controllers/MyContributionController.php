@@ -4,17 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Contribution;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Auth\AuthenticationException;
 
 class MyContributionController extends Controller
 {
     public function index()
-    {        
-        // Display all user's contributions, paginated to 6 results per page.
+    {
+        // Display all user's contributions, paginated to 8 results per page.
         return view('my_contribution.index', [
             'contributions' => User::find(auth()->user()->id)->contributions->paginate(8)
         ]);
@@ -30,7 +27,8 @@ class MyContributionController extends Controller
 
         // Display the (user's) contribution
         return view('my_contribution.show', [
-            'contribution' => $contribution->with('answers')->get()->first()
+            'contribution' => $contribution,
+            'answers' => $contribution->answers
         ]);
     }
 
@@ -81,6 +79,5 @@ class MyContributionController extends Controller
         }
 
         return throw new AuthorizationException('This action is forbidden', 403);
-    
     }
 }
