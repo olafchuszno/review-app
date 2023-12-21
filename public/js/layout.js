@@ -1,6 +1,7 @@
 const dropdownMenuButton = document.querySelector("#dropdown-menu-button");
 const menuDropdown = document.querySelector("#menu-dropdown");
 const trigger = document.querySelector("#trigger");
+const notificationBell = document.getElementById("notification-bell");
 
 // On a click of the menu
 dropdownMenuButton.addEventListener("click", function () {
@@ -24,3 +25,7 @@ const onClickAway = (e) => {
         window.removeEventListener("click", onClickAway);
     }
 };
+
+notificationBell.addEventListener("click", () => {
+    alert("Newsletter is coming soon. Please check back later!");
+});
