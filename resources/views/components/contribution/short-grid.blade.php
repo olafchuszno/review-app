@@ -15,7 +15,7 @@
                     </a>
                 </td>
                 <td class="col-span-2 pb-1 sm:text-md overflow-hidden">
-                    <a href="contributions/{{ $contribution->id }}" class="break-all">
+                    <a href="contributions/{{ $contribution->id }}" class="break-words">
                         {{ $contribution->answers->first()->body }}
                     </a>
                 </td>
