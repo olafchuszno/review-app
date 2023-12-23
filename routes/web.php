@@ -27,7 +27,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/about', function() {
+Route::get('/about', function () {
     return view('about');
 });
 
@@ -66,3 +66,5 @@ Route::get('/my/contributions/{contribution:id}', [MyContributionController::cla
 Route::get('/my/contributions/{contribution:id}/edit', [MyContributionController::class, 'edit'])->middleware('auth');
 Route::patch('/my/contributions/{contribution:id}/edit', [MyContributionController::class, 'update'])->middleware('auth');
 Route::delete('/my/contributions/{contribution:id}', [MyContributionController::class, 'destroy'])->middleware('auth');
+
+Route::post('/contribution/{contribution:id}/like', [LikeContributionController::class, 'store'])->middleware('auth');
