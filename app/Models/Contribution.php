@@ -20,7 +20,7 @@ class Contribution extends Model
     {
         return $this->belongsTo(Post::class, 'post_id');
     }
-    
+
     public function airport()
     {
         return $this->belongsTo(Airport::class, 'airport_id');
@@ -34,5 +34,10 @@ class Contribution extends Model
     public function answers()
     {
         return $this->hasMany(Answer::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 }
