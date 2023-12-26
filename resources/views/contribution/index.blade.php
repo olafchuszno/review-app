@@ -28,8 +28,8 @@
                     @endforeach
 
                 </table>
-                <form action="{$contribution->id}" method="POST" class="min-w-full mt-2">
-                    @method('store')
+                <form action="/contribution/{{$contribution->id}}/like" method="POST" class="min-w-full mt-2">
+                    @csrf
                     <button type="submit" class="flex items-center gap-1 justify-start max-w-min bg-indigo-800 px-2 py-1 rounded-2xl">
                         <p class="text-indigo-300 font-bold text-xl">Like</p>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#A5B4FC" width="20" height="20" viewBox="0 0 24 24">
