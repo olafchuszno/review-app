@@ -19,6 +19,7 @@ export default {
                 neutralStone: "#d6d3d1",
 
                 lightGrey: "#D6D6D6",
+                darkGrey: "#B3B3B3",
                 raisinBlack: "#242325",
             },
         },
