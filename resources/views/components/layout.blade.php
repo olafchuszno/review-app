@@ -9,8 +9,8 @@
 
 </head>
 
-<body class="bg-secondaryIndigo text-stone-200">
-    <nav class="justify-between bg-primaryIndigo fixed top-0 left-0 right-0">
+<body class="text-raisinBlack bg-lightGrey">
+    <nav class="justify-between bg-lightGrey fixed top-0 left-0 right-0">
         <div class="mx-10 px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
