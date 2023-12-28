@@ -9,10 +9,10 @@
                 <x-section-link href="/airports/{{$contribution->airport->code}}/topics/{{$contribution->topic->name}}" requestIs="none">
                     {{ $contribution->topic->name }}
                 </x-section-link>
-                <x-section-link href="/my/contributions/{{$contribution->id}}/edit" class="text-primaryOrange">
+                <x-section-link href="/my/contributions/{{$contribution->id}}/edit" class="text-primaryOrange hover:bg-raisinBlack">
                     Edit
                 </x-section-link>
-                <x-section-link class="text-primaryOrange">
+                <x-section-link class="text-primaryOrange hover:bg-raisinBlack">
                     <form method="POST" action="/my/contributions/{{$contribution->id}}">
                         @csrf
                         @method('DELETE')
@@ -24,9 +24,9 @@
             </div>
         </section>
 
-        <section class="w-2/3 p-5 border rounded-2xl border-neutralStone bg-indigo-300 flex justify-center items-center mb-10">
+        <section class="w-2/3 p-5 border rounded-2xl border-neutralStone bg-primaryIndigo flex justify-center items-center mb-10">
 
-            <table class="divide-y divide-gray-100 text-indigo-800 mt-2">
+            <table class="divide-y divide-gray-100 text-raisinBlack mt-2">
 
                 @foreach ($answers as $answer)
                 <x-basic-info class="{{ $loop->last ? '' : 'border-b-2 border-indigo-200' }}">
