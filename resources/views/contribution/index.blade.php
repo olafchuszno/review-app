@@ -25,7 +25,7 @@
                 </p>
                 @endif
 
-                <table class="divide-y divide-gray-100 text-reisinBlack mt-2">
+                <table class="divide-y divide-gray-100 text-raisinBlack mt-2">
 
                     @foreach ($contribution->answers as $answer)
                     <x-basic-info class="{{ $loop->last ? '' : 'border-b-2 border-indigo-200' }}">
