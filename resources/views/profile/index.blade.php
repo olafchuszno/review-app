@@ -19,7 +19,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div>
                         <table>
                             <x-tr-settings>
@@ -27,9 +27,7 @@
                                     First name
                                 </x-td-settings>
                                 <x-td-settings>
-                                    <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
-                                        {{ auth()->user()->first_name }}
-                                    </a>
+                                    {{ auth()->user()->first_name }}
                                 </x-td-settings>
                             </x-tr-settings>
                             <x-tr-settings>
@@ -37,9 +35,7 @@
                                     Last name
                                 </x-td-settings>
                                 <x-td-settings>
-                                    <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
-                                        {{ auth()->user()->last_name }}
-                                    </a>
+                                    {{ auth()->user()->last_name }}
                                 </x-td-settings>
                             </x-tr-settings>
                             <x-tr-settings>
@@ -47,14 +43,12 @@
                                     Username
                                 </x-td-settings>
                                 <x-td-settings>
-                                    <a href="/profile/edit" class="flex justify-center items-center gap-1 hover:text-primaryOrange">
-                                        {{ auth()->user()->username }}
-                                    </a>
+                                    {{ auth()->user()->username }}
                                 </x-td-settings>
                             </x-tr-settings>
                             <tr class="flex justify-evenly py-1 mt-4 mb-2">
                                 <td>
-                                    <a href="/profile/edit" class="bg-secondaryIndigo border font-medium hover:bg-secondaryIndigo hover:border hover:border-primaryOrange px-5 py-2 rounded-xl text-lg">
+                                    <a href="/profile/edit" class="bg-raisinBlack text-primaryIndigo font-bold hover:bg-primaryIndigo hover:text-raisinBlack hover:border hover:border-raisinBlack px-5 py-2 rounded-xl text-lg">
                                         Edit your profile
                                     </a>
                                 </td>
