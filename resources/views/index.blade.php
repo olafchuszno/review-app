@@ -13,8 +13,8 @@
                 <form action="/search" method="POST" class="flex gap-4">
                     @csrf
 
-                    <input name="airport" placeholder="e.g. LAX or Warsaw" class="text-raisinBlack focus:placeholder:text-primaryIndigo placeholder:text-raisinBlack text-lg font-bold border-2 transition-all border-primaryIndigo bg-primaryIndigo placeholder:font-bold active:ring-0 active:border-0 px-3 py-1 rounded-2xl" type="text">
-                    <button type="submit" class="font-bold px-6 py-1 rounded-2xl bg-primaryIndigo transition-all text-raisinBlack border-primaryIndigo active:border-none active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone">
+                    <input name="airport" placeholder="e.g. LAX or Warsaw" class=" focus:placeholder:text-primaryIndigo bg-primaryIndigo text-raisinBlack hover:bg-raisinBlack hover:text-primaryIndigo placeholder:text-raisinBlack hover:placeholder:text-primaryIndigo text-lg font-bold transition-all border-primaryIndigo placeholder:font-bold active:ring-0 active:border-0 px-3 py-1 rounded-2xl" type="text">
+                    <button type="submit" class="font-bold px-6 py-1 rounded-2xl bg-primaryIndigo transition-all text-raisinBlack border-primaryIndigo hover:bg-raisinBlack hover:text-primaryIndigo active:border-none active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone">
                         Let's go!
                     </button>
                 </form>
