@@ -8,7 +8,7 @@
                 <x-navigation.buttons :object="$contributions" />
             </div>
 
-            @if ($contributions->empty())
+            @if (! $contributions->count())
             <div class="flex flex-col items-center px-6 py-3 text-raisinBlack rounded-3xl bg-primaryIndigo mt-12">
                 <h2 class="text-2xl mb-1 font-extrabold">There aren't any contributions yet.</h2>
                 <h3 class="text-2xl font-medium">Feel free to contribute or check again soon!</h3>
