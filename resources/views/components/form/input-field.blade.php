@@ -1,4 +1,4 @@
-@props(['type' => 'text', 'label_class' => '', 'input_class' => 'text-darkGrey placeholder:text-darkGrey', 'name', 'div_class' => '', 'error_case' => $errors->has($name) ? 'ring-red-500 ring-2' : 'focus:ring-indigo-600 ring-1'])
+@props(['type' => 'text', 'label_class' => '', 'input_class' => 'text-raisinBlack placeholder:text-raisinBlack', 'name', 'div_class' => '', 'error_case' => $errors->has($name) ? 'ring-red-500 ring-2' : 'focus:ring-indigo-600 ring-1'])
 <div class="{{ $div_class }}">
     <label for="{{ $name }}" class="text-raisinBlack mb-1 block text-lg font-semibold leading-6 {{ $label_class }}">{{ $slot }}</label>
     <div class="mt-0.5">
