@@ -51,6 +51,7 @@
                         <div class="flex space-x-4 items-center">
 
                             <!-- Navbar Left links -->
+                            <a href="/posts" class="{{ request()->is('posts') ? 'bg-secondaryIndigo ' : 'hover:bg-secondaryIndigo' }} active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone transition rounded-full px-4 py-2 text-lg font-semibold">Posts</a>
                             <a href="/" class="{{ request()->is('/') ? 'bg-secondaryIndigo ' : 'hover:bg-secondaryIndigo' }} active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone transition rounded-full px-4 py-2 text-lg font-semibold">Airport Search</a>
                             <a href="#" class="{{ request()->is('journey_search') ? 'bg-secondaryIndigo ' : 'hover:bg-secondaryIndigo' }} active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone transition rounded-full px-4 py-2 text-lg font-semibold">Journey Search</a>
                             <a href="/about" class="{{ request()->is('about') ? 'bg-secondaryIndigo ' : 'hover:bg-secondaryIndigo' }} active:bg-neutralStone active:text-primaryIndigo active:ring ring-neutralStone transition rounded-full px-4 py-2 text-lg font-semibold">About</a>
