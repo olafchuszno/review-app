@@ -74,9 +74,6 @@ class MyContributionController extends Controller
         }
 
         return redirect("/my/contributions/{$contribution->id}")->with('success', 'Contribution was updated');
-
-        // TODO update answers
-        return view('page_under_construction');
     }
 
     public function destroy(Contribution $contribution)
