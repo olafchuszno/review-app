@@ -69,3 +69,5 @@ Route::patch('/my/contributions/{contribution:id}/edit', [MyContributionControll
 Route::delete('/my/contributions/{contribution:id}', [MyContributionController::class, 'destroy'])->middleware('auth');
 
 Route::post('/contribution/{contribution:id}/like', [LikeContributionController::class, 'store'])->middleware('auth');
+
+Route::get('/posts', [PostController::class, 'index']);
