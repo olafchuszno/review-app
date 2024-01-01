@@ -2,6 +2,7 @@
 
 use App\Models\Contribution;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AccountController;
