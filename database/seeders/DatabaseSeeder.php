@@ -45,8 +45,6 @@ class DatabaseSeeder extends Seeder
             'topic_id' => 1
         ]);
 
-
-
         // Create one Contribution for the 1st Airport and 1st Topic BY the 1st User
         Contribution::factory()->create([
             'user_id' => 1,
@@ -71,6 +69,5 @@ class DatabaseSeeder extends Seeder
                 ]);
             }
         }
-
     }
 }
