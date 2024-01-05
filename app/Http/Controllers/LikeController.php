@@ -6,7 +6,7 @@ use App\Models\Contribution;
 use App\Models\Like;
 use Illuminate\Http\Request;
 
-class LikeContributionController extends Controller
+class LikeController extends Controller
 {
     public function store(Contribution $contribution)
     {
