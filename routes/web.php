@@ -2,6 +2,7 @@
 
 use App\Models\Contribution;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\SearchController;
@@ -12,7 +13,6 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContributionController;
 use App\Http\Controllers\MyContributionController;
-use App\Http\Controllers\LikeContributionController;
 
 /*
 |--------------------------------------------------------------------------
