@@ -18,9 +18,6 @@ class LikeFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'user_id' => User::factory(),
-            'contribution_id' => Contribution::factory()
-        ];
+        return [];
     }
 }
