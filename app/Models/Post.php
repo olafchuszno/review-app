@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
@@ -26,7 +27,7 @@ class Post extends Model
         return $this->hasMany(Contribution::class);
     }
 
-    public function likes()
+    public function likes(): MorphMany
     {
         return $this->morphMany(Like::class, 'likable');
     }

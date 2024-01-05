@@ -36,7 +36,7 @@ class Contribution extends Model
         return $this->hasMany(Answer::class);
     }
 
-    public function likes()
+    public function likes(): MorphMany
     {
         return $this->morphMany(Like::class, 'likable');
     }
