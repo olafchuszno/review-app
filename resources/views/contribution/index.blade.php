@@ -38,6 +38,7 @@
                 <div class="flex items-end mb-1">
                     <form action="/contribution/{{$contribution->id}}/like" method="POST" class="flex items-center justify-center mt-2">
                         @csrf
+                        <input name="likable_type" type="hidden" value="Contribution">
                         <button type="submit" class="flex items-center gap-1 justify-start max-w-min bg-primaryOrange px-3 py-1 rounded-2xl hover:text-primaryIndigo">
                             <p class="font-extrabold text-xl">Like</p>
                             <svg xmlns="http://www.w3.org/2000/svg" class="hover:fill-primaryIndigo" width="20" height="20" viewBox="0 0 24 24">
