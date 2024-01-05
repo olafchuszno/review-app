@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Like;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -39,6 +40,6 @@ class Contribution extends Model
 
     public function likes(): MorphMany
     {
-        return $this->morphMany(Like::class, 'likable');
+        return $this->morphMany('App\Models\Like', 'likable');
     }
 }
