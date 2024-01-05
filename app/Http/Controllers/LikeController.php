@@ -12,6 +12,6 @@ class LikeController extends Controller
     {
         return Like::like_or_unlike_a_contribution($contribution) == true ?
             redirect()->back()->with('success', "Liked the contribution") :
-            redirect()->back()->with('failure', "Liked the contribution");
+            redirect()->back()->with('failure', "Unliked the contribution");
     }
 }
