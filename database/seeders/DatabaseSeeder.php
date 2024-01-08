@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        DB::unprepared(file_get_contents('/Users/seiz/Downloads/sql/airports.sql'));
+        DB::unprepared(file_get_contents(asset('./airports.sql')));
         $this->command->info('Airport table seeded!');
 
         // Create the first User
